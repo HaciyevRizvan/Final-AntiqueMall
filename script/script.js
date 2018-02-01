@@ -283,20 +283,47 @@ $('.foldable .active_li').click(function () {
     }
 })
 
-
-
-
+$(".products_list li").click(function(){
+  $("li").removeClass("active");
+  $(this).addClass("active");
+  return false;
+})
 });
-var range_val = document.getElementById("f_range");
-var range_val1 = document.getElementById("f_range1");
+var btn= document.getElementsByClassName("click_btn");
+
+var a;
+var up=document.getElementsByClassName("up");
+var down_i=document.getElementsByClassName("down");
+for (a = 0; a < btn.length; a++) {
+    btn[a].addEventListener("click", function() {
+        var down = this.nextElementSibling;
+        if (down.style.display == "block") {
+            down.style.display = "none";
+            down_i.style.display="none"
+            up.style.display="block"
+            
+        } else {
+            down.style.display = "block";
+            up.style.display="block"
+            down_i.style.display="none"
+        }
+    });
+}
+
+
+var range_value = document.getElementById("f_range");
+var range_value1 = document.getElementById("f_range1");
 var result = document.getElementById("from");
 var result1 = document.getElementById("to");
-result.innerHTML = range_val.value;
-result1.innerHTML = range_val.value;
+result.innerHTML = range_value.value;
+result1.innerHTML = range_value1.value;
 
-range_val.oninput = function() {
+range_value.oninput = function() {
   result.innerHTML = this.value;
 }
-range_val1.oninput = function() {
+range_value1.oninput = function() {
   result1.innerHTML = this.value;
 }
+
+
+

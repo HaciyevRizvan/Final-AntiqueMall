@@ -13,9 +13,9 @@ a{color:gray;text-decoration:none;&:hover{text-decoration:none;color:#993816;tra
 li{display:inline-block;margin:0 10px;padding-right:17px;text-transform:uppercase;height:59px;padding-top:18px;cursor: pointer;
 &:hover {.shop{display:block;transition: all 5s ease;}}.down{font-size:15px;
 padding-left:10px;height: 43px;}
-.shop{padding:18px;position: absolute;z-index:10;border:1px solid white;
-width:250px;background: white;top:100%;display:none;list-style: circle;
-li{display:block;text-align:left;padding:15px 15px 7px 0px;cursor: pointer;
+.shop{padding:0px;position: absolute;z-index:10;border:1px solid white;
+width:250px;background: white;top:100%;padding:0px 20px;display:none;
+li{display:block;text-align:left;margin:0;height:50px;padding:17px 0px 0px 25px;cursor: pointer;list-style-type: circle;
 text-transform:uppercase;font-weight:bold;border-bottom:1px dotted lightgray;&:hover a{color:#993816;}
 a{color:rgb(99, 99, 99);}}}
 i{color:white;}a{color:white;text-decoration:none;}}
@@ -213,7 +213,7 @@ li{padding:11px;a{color:white;text-decoration:none;}}}}}.marg{margin:0;margin:20
     }h1{font-family: Lato;font-weight: 400;}
     }}.padd{padding:0;}}
     #paint_gallery{margin-top:50px;.form{text-align:center;position:relative;top:-30px;color:gray;
-    .sorting{border: 1px solid lightgray;padding: 10px 20px;border-radius: 50px;}}
+    .sorting{border: 1px solid lightgray;padding: 10px 20px;border-radius: 50px;outline:none;}}
     .right_side{padding:0;padding-bottom:70px;.sorting{position:relative;
         p{margin:0;}}
         .antic{text-align:center;position:relative;box-sizing:border-box;
@@ -234,7 +234,7 @@ li{padding:11px;a{color:white;text-decoration:none;}}}}}.marg{margin:0;margin:20
         a{text-decoration:none;i{padding-left:10px;color:gray;}}
     }
         }
-        .left_side{h3{color:#222;font-weight:300;font-size:18px;}.lines {color: lightgray;background:lightgray;width: 100%;
+        .left_side{position:relative;top:-75px;h3{color:#222;font-weight:300;font-size:18px;}.lines {color: lightgray;background:lightgray;width: 100%;
         border: 1px solid lightgray;border-radius: 5px;margin-top: 5px; margin-bottom: 5px;
         .first {color: drya;width:17%;height:1px;padding: -1px;border-radius: 5px;background: #993816;}
         }.search_part{.search{width: 100%;border:2px solid lightgray;border-radius: 20px;position:relative;
@@ -244,11 +244,11 @@ li{padding:11px;a{color:white;text-decoration:none;}}}}}.marg{margin:0;margin:20
         .price_value{border:none;width:100%;height:10px;margin-top:30px;background:lightgray;
         -webkit-appearance: none;border-radius:12px;outline: none;
         &::-webkit-slider-thumb {-webkit-appearance: none;width: 18px;height: 18px;border-radius: 50%;position: relative;z-index: 10;
-            background: #993816;cursor: pointer;} }
+            background: #993816;cursor: pointer; cursor:e-resize;} }
         .price_value1{border:none;width:100%;height:10px;margin-top:30px;background:lightgray;
         -webkit-appearance: none;border-radius:12px; outline: none;
         &::-webkit-slider-thumb {-webkit-appearance: none;width: 18px;height: 18px;border-radius: 50%;
-            background: #993816;cursor: pointer;}position:relative;top:-40px; }
+            background: #993816;cursor:e-resize;}position:relative;top:-40px;  }
     .amounts{margin-top:20px;.sub_btn{background: transparent;border:1px solid #993816;padding: 7px 33px;outline:none;
         border-radius: 20px;float:right;}.price_part{color:gray;margin-bottom:50px;}}
     .product_category{padding-bottom:30px;ul{padding:0;list-style:none;li{margin:0;a{color:gray;text-decoration:none;
@@ -256,7 +256,7 @@ li{padding:11px;a{color:white;text-decoration:none;}}}}}.marg{margin:0;margin:20
         }
         .products{padding-bottom:30px;.text{display:inline-block;padding:13px;position: absolute;
         a{color:gray;text-decoration:none;
-        &:hover{color:#993816;}}}
+        &:hover{color:#993816;}}.f_shop{margin-top: 20px;color: gray;font-size: 17px;}}
         .img_box{border:2px solid lightgray;box-sizing:border-box;width:26%;border-radius:3px;display:inline-block;
         margin:15px 0px 15px 0px;
         img{border:1px solid white;max-width:100%;display:inline-block;}}
@@ -551,7 +551,7 @@ img{max-width:100%;} p{margin:40px 0px 40px 0px;}
         width:100%;height: 100vh;top: 0;left:0;position:fixed;cursor: zoom-in;
         .hide_b{margin: 0 27%;width: 44.478%;height: 100vh;box-sizing:border-box;overflow: hidden;
         .main{.slide_b{width:500%;
-        img{float:left;max-width:100%;margin:0px;padding:30px 0px 30px;&:hover{cursor:pointer;}}}}
+        img{float:left;width:calc(100%/5);margin:0px;padding:30px 0px 30px;&:hover{cursor:pointer;}}}}
         }
             .icon_b{display:block;position:relative;top:-400px;
             .left_b{font-size:70px;color:rgb(95, 95, 95);float:left;margin-left:2%;&:hover{color:black;}}
@@ -624,6 +624,7 @@ img{max-width:100%;} p{margin:40px 0px 40px 0px;}
 #menu{.registr_page{.reg{margin-left:20%;}}}
 #menu{.login_page{.reg{margin-left:20%;}}}
 #menu{.reset_page{.reg{margin-left:20%;}}}
+#category {.padd {.slider {width: 83.8%;}}}
 }
 
 @media only screen and(max-width:768px){
@@ -652,6 +653,10 @@ li{display:inline-block;border-right:none;margin:0 17px;padding-right:2px;
 #menu{.reset_page{.reg{margin-left:13%;width: 390px;i{left:350px;}}}}
 #page404 .t_404 {background: #e9e7e7;width: 100%;margin-left:0;padding-top: 70px;.home_b{width:45%;}
 }
+#category {.padd {.slider {
+    width: 83.8%;}}}
+    #b_slider .big_box .hide_b {
+        width:70%;margin-left:10%;}
 }
 @media only screen and(max-width:480px){
 #first_list{ul{float:none;position: absolute;left:0;li{border-right:none;margin:0 8px;padding-right:0px;}}}
@@ -674,6 +679,8 @@ li{display:inline-block;border-right:none;margin:0 17px;padding-right:2px;
 #menu{.reset_page{.reg{margin-left:5%;width: 280px;height:480px;i{left:245px;top:-430px;}.reg_padd{.btn_res{font-size:13px;}}}}}
 #page404{h1{font-size:135px;} .t_404 {background: #e9e7e7;width: 100%;margin-left:0;padding-top: 70px;h2{font-size:20px;}
 }}
+#b_slider .big_box .hide_b {
+    width:100%;margin-left:0;}
 }
 @media only screen and(max-width:320px){
     #first_list{ul{float:none;text-align:left;li{border-right:none;margin:0 4px;padding-right:0px;}}}
@@ -695,6 +702,8 @@ li{display:inline-block;border-right:none;margin:0 17px;padding-right:2px;
     i{left: 220px;top: -400px;}}}}  
     #menu{.reset_page{.reg{margin-left:0;width: 250px;height:450px;
     i{left: 220px;top: -400px;}.reg_padd{p{font-size:13px;}}.btn_res{font-size:12px;}}}}  
+    #b_slider .big_box .hide_b {
+       width:100%;margin-left:0;}
 }
 .registr{p{font-size:13px;}h4{font-size:13px;}}
 .registr1{p{font-size:13px;}h4{font-size:13px;}}
