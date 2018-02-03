@@ -605,7 +605,8 @@
 @keyframes fadeInLeft {
   from {
     opacity: 0;
-    transform: translate3d(-100%, 0, 0);
+    border:none;
+    transform: translate3d(-60%, 0, 0);
   }
 
   to {
@@ -980,12 +981,12 @@
   }
 
   60% {
-    transform: skewX(20deg);
+    transform: skewX(-40deg);
     opacity: 1;
   }
 
   80% {
-    transform: skewX(-5deg);
+    transform: skewX(0deg);
     opacity: 1;
   }
 
