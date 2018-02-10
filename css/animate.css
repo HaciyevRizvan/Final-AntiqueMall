@@ -573,12 +573,14 @@
 @keyframes fadeInDown {
   from {
     opacity: 0;
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -500%, 0);
+    
   }
 
   to {
     opacity: 1;
     transform: none;
+    
   }
 }
 
@@ -595,6 +597,7 @@
   to {
     opacity: 1;
     transform: none;
+    display:block;
   }
 }
 
@@ -976,7 +979,7 @@
 
 @keyframes lightSpeedIn {
   from {
-    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    transform: translate3d(200%, 0, 0) skewX(-30deg);
     opacity: 0;
   }
 
@@ -998,7 +1001,7 @@
 
 .lightSpeedIn {
   animation-name: lightSpeedIn;
-  animation-timing-function: ease-out;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes lightSpeedOut {

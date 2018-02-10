@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 $(".menu_b").click(function(){
     $(".swipe").css({"left":"0px","transition":"0.5s"})   
 })
@@ -18,62 +19,42 @@ $('.scrollup').click(function(){
     $(this).css({"color":"white"})
     return false;
 });
+setInterval(function(){ 
+var nextSlide = $(".slider_in.active").hide().removeClass("active").next(".slider_in")  
+if (nextSlide.length === 0) {
+   nextSlide = $(".slider_in").first();
+}
+  nextSlide.fadeIn().addClass("active")
+    $('#slider .text p').css({"animation":"lightSpeedIn","animation-duration":"1.5s ease-in","animation-delay":"2s"});
+   
+} ,7000);
 
-var index=1;
-var x=index+2;
+$(".right_icon").click(function(){
+    $('#slider .text p').css({"animation":"lightSpeedIn","animation-duration":"1s"});
 
-$(".right_icon").click(function () {  
-if(index==1){
-   $(".slide").css({ "background":"url(images/slide2.jpg)","transition": "all .5s ease-in","background-size": "cover",
-"background-repeat": "no-repeat","background-position": "center center"});
-$(".slide .matrix h1").html("<h1>antique marketplace</h1>");
-$(".slide .text p").html("Antique is one of the best marketplace that allows you to buy the items you love and discover new favorites.");
-$(".slide .text p").css({"animation-name":"thirdp","animation-duration":"1.3s"})
-index++;
-return false;}
- else if(index==2){
-$(".slide").css({ "background":"url(images/slide3.jpg)","transition": "all .5s ease-in","background-size": "cover",
-"background-repeat": "no-repeat","background-position": "center center"});
-$(".slide .matrix h1").html("<h1>antique theme</h1>");
-$(".slide .text p").html("The best theme for Antique, we always want to bring R&D IT closer to your business & understand what you need.");
-$(".slide .text p").css({"animation-name":"lightSpeedIn","animation-duration":"1.3s"})
-index++;
-return false;}
-else {
- $(".slide").css({ "background":"url(images/slide1.jpg)","transition": "all .5s ease-in","background-size": "cover",
-"background-repeat": "no-repeat","background-position": "center center"});
-$(".slide .matrix h1").html("<h1>antique collection</h1>");
-$(".slide .text p").html("The world's largest curated marketplace for antiques. The easiest way to collect items of such beauty and authenticity.");
-$(".slide .text p").css({"animation-name":"firstp","animation-duration":"1.3s"})
-index-=2;
- return false;}
+var nextSlide =  $(".slider_in.active").hide().removeClass("active").next(".slider_in").addClass("active")
+
+ if (nextSlide.length === 0){
+   nextSlide = $(".slider_in").first().fadeIn();
+}
+nextSlide.fadeIn().addClass("active");
+$('#slider .text p').css({"animation":"lightSpeedIn","animation-duration":"1.5s ease-in","animation-delay":"2s"});
+
+});
+var index=0;
+$(".left_icon").click(function(){
+    $('#slider .text p').css({"animation":"lightSpeedIn","animation-duration":"1s"});
+ 
+    var nextSlide =  $(".slider_in.active").hide().removeClass("active").next(".slider_in").addClass("active")
+     if (nextSlide.length === 0) {
+       nextSlide = $(".slider_in").first().fadeIn();
+       index=0;
+    }
+    nextSlide.fadeIn().addClass("active");
+    $('#slider .text p').css({"animation":"lightSpeedIn","animation-duration":"1.5s ease-in","animation-delay":"2s"});
+  
     });
-  $(".left_icon").click(function () {  
-if(index==1){
-   $(".slide").css({ "background":"url(images/slide3.jpg)","transition": "all .5s ease-in","background-size": "cover",
-    "background-repeat": "no-repeat","background-position": "center center"});
-    $(".slide .matrix h1").html("<h1>antique theme</h1>");
-    $(".slide .text p").html("The best theme for Antique, we always want to bring R&D IT closer to your business & understand what you need.");    
-       index+=2;
-          return false;}
-            else if(index==2){
-     $(".slide").css({ "background":"url(images/slide1.jpg)","transition": "all .5s ease-in","background-size": "cover",
-    "background-repeat": "no-repeat","background-position": "center center"});
-        $(".slide .matrix h1").html("<h1>antique collection</h1>");
-        $(".slide .text p").html("The world's largest curated marketplace for antiques. The easiest way to collect items of such beauty and authenticity.");   
-            index--;
-            return false;}
-            else {
-        $(".slide").css({ "background":"url(images/slide2.jpg)","transition": "all .5s ease-in","background-size": "cover",
-      "background-repeat": "no-repeat","background-position": "center center"});
-       $(".slide .matrix h1").html("<h1>antique marketplace</h1>");
-       $(".slide .text p").html("Antique is one of the best marketplace that allows you to buy the items you love and discover new favorites.");
-       index--;
-      return false;}
-            });
-
 // Accord
-
 $(".registr_c").click(function(){
     
     $(".registr_page").fadeIn(400);
@@ -82,7 +63,6 @@ $(".registr_c").click(function(){
 $(".login_c").click(function(){
     
     $(".login_page").fadeIn(400);
-
 })
 $(".question").click(function(){
     $(".login_page").fadeOut();
@@ -131,150 +111,139 @@ $(window).click(function(event) {
         $(".search_page").fadeOut(500);
     }
 });
-
+//---------------------------------------- resize function--------------------------------
 function sliderInit() {
-    newwidth=$(".slide img").width();    
-    smallwidth=$(".slide_s img").width();
+    slideC=$(".slide_c img").width($(".slider").width());  
+    newwidth=$(".slide_c").width();  
+    slideC=newwidth; 
+    smallwidth=$(".slide_s").width(); 
     length= $(".slide_in").children().length;  
     smallength=$(".slide_small").children().length;
-    prev=0;
-    margin=0;
-    small=0;
+    prev=0;margin=0;
+    small=0;swipe=0;prev_b=0;
+    slideB=$(".slide_b img").width($(".hide_b").width()); 
+    bwidth=$(".slide_b").width();
+    slideB=bwidth;
+    blength=$(".res_b").children().length;
+   
 }
 sliderInit();
-
 $(window).on('resize', function() {
+    
     sliderInit();
 })
-
+//---------------------------------------- resize function--------------------------------
+//--------------------------------next click function----------------------------------
 $("#next").click(function(){
     prev++; 
     margin+=newwidth;
     small+=smallwidth; 
     if(prev>=length){   
-        margin=newwidth*4;
-        small=smallwidth*4;
-      $(".big_box").css({"display":"block"});
-      $("html").css({"overflow":"hidden"});
-      bwidth=$(".slide_b img").width();
-      blength=$(".main").children().length;
-      swipe=0;
-      prev_b=0;
-     $("#next_b").click(function(){
-         prev_b++;
-         swipe+=bwidth;
-         if(prev_b>=blength){
-            swipe=0;
-            prev_b=0
-        }
-         $(".slide_b").css({"margin-left":-swipe})
-         return false;
-         
-     })
-     
-     $(".slide_b img").click(function(){
-        next_click();
-        return false;
-     })
-     $("#prev_b").click(function(){
-         prev_b--;
-         swipe-=bwidth;
-         if(prev_b<=0){
-         swipe =bwidth*(blength-1);
-         prev_b=blength;
-        }
-         $(".slide_b").css({"margin-left":-swipe})
-         return false;
-     })
-  
-     $(window).click(function(event) {
-        if(event.target.className=="big_box"){
-            $(".big_box").css({"display":"none"});
-            $("html").css({"overflow":"scroll"});
-        }
-    });
-    }
-    $(".slide img").css({"margin-left":-margin,"transition":"0.3s ease"})
-    $(".slide_s img").css({"margin-left":-small,"transition":"0.3s ease"})
-    $(".slide_s").prev().children().removeClass("active_img");
-
+        margin=newwidth*(length-1);
+        small=smallwidth*(smallength-1);
+      $(".big_box").css({"visibility":"visible"});
+      $("html").css({"overflow":"hidden"}); }
+    $(".slide_c img").css({"margin-left":-margin,"transition":"0.3s ease"})
+    $(".slide_small").css({"margin-left":-small,"transition":"0.3s ease"})
+    $(".slide_s.actives").removeClass("actives").next(".slide_s").addClass("actives");
     return false;  
-})    
-$("#prev").click(function(){
-    prev--;
-     margin-=newwidth;
-     small-=smallwidth;
-     if (prev <= 0) {
-        margin=0;
-        small=0;
-        $(".big_box").css({"display":"block"});
-        $("html").css({"overflow":"hidden"});
-        $(".slde_b:first-child img").html("<img src=images/drink1-b.jpg>")
-        bwidth=$(".slide_b img").width();
-        blength=$(".main").children().length;
-        swipe=0;
-        prev_b=0;
-       $("#next_b").click(function(){
-           prev_b++;
-           swipe+=bwidth;
-           if(prev_b>=blength){
-              swipe=0;
-              prev_b=0
-          }
-           $(".slide_b").css({"margin-left":-swipe})
-           return false;
-       })
-       $("#prev_b").click(function(){
-           prev_b--;
-           swipe-=bwidth;
-           if(prev_b<=0){
-           swipe =bwidth*(blength-1);
-           prev_b=blength;
-          }
-           $(".slide_b").css({"margin-left":-swipe})
-           
-           return false;
-       })
-      
- }
-     $(".slide img").css({"marginLeft" :-margin,"transition" : "0.3s ease"})
-     $(".slide_s img").css({"margin-left":-small,"transition":"0.3s ease"})
-     
-     return false;
-  })
-  function next_click(){
+}) 
+ //----------------------------next click function----------------------------------
+ $(window).click(function(event) {
+    if(event.target.className=="big_box"){
+        $(".big_box").css({"visibility":"hidden"});
+        $("html").css({"overflow":"scroll"});}
+});
+//------------------next_click function-------------------------
+function nextb_click(){
     prev_b++;
     swipe+=bwidth;
     if(prev_b>=blength){
        swipe=0;
        prev_b=0
    }
-    $(".slide_b").css({"margin-left":-swipe})
+    $(".slide_b img").css({"margin-left":-swipe})
     return false;
  }
- function slide_s(){
+ function prevb_click(){
+    prev_b--;
+    swipe-=bwidth;
+     if(prev_b<=0){
+        swipe=bwidth*(blength-1);   
+        prev_b=blength;   
+    }
+     $(".slide_b img").css({"margin-left":-swipe})
+     return false;
+ }
+//-------------------------- b slide--------------------------
+$("#next_b").click(function(){
+    nextb_click();
+    return false;      
+ })    
+ $(".slide_b img").click(function(){
+    nextb_click();
+    return false;
+ })
+ $("#prev_b").click(function(){
+    prevb_click()
+    return false;
+ })
+//------------------------ b slide--------------------------------
+
+//---------------------------- prev click-----------------------------
+$("#prev").click(function(){
+     prev--;
+     margin-=newwidth;
+     small-=smallwidth;
+     if (prev <= 0) {
+        margin=0;
+        small=0;
+        prev=margin;
+        $(".big_box").css({"visibility":"visible"});
+        $("html").css({"overflow":"hidden"}); 
+       
+ }
+     $(".slide_c img").css({"marginLeft" :-margin,"transition" : "0.3s ease"})
+     $(".slide_small").css({"margin-left":-small,"transition":"0.3s ease"})
+     $(".slide_s.actives").removeClass("actives").prev(".slide_s").addClass("actives");
+     
+     return false;
+  })
+//---------------------------- prev click-----------------------------
+//window click function
+ $(window).click(function(event) {
+    if(event.target.className=="big_box"){
+        $(".big_box").css({"visibility":"hidden"});
+        $("html").css({"overflow":"scroll"});   
+      }
+});
+eq=$(".slide_s").eq();
+//slide_s click function
+ $(".slide_s").click(function() {
     prev++; 
     margin+=newwidth;
     small+=smallwidth;
     if(prev>=length){
-        margin=newwidth*4;
-        small=smallwidth*4; 
+     margin=newwidth*4;
+     small=smallwidth*4;    
     }
-    $(".slide img").css({"marginLeft" :-margin,"transition" : "0.3s ease"})
-     $(".slide_s img").css({"margin-left":-small,"transition":"0.3s ease"})
-     $(".slide_s").prev().children().removeClass("active_img");
- }
-
- $(window).click(function(event) {
-    if(event.target.className=="big_box"){
-        $(".big_box").css({"display":"none"});
-        $("html").css({"overflow":"scroll"});
-      }
+     $(".slide_c img").css({"marginLeft" :-margin,"transition" : "0.3s ease"});
+     $(".slide_small").css({"margin-left":-small,"transition":"0.3s ease"});
+     $(".slide_s.actives").removeClass("actives").next(this).addClass("actives");
 });
- $(".slide_s").click(function() {
-    
-    slide_s();
-});
+$('.foldable .sec_li').click(function () {
+    if ($('.sec_act').css({ 'display':'none' })) {
+        $(this).css({ 'border-top': '1px solid #993816' })
+        $(".foldable .active_li").css({"border-top":"none"})
+        $('.active').slideUp();
+        $('.sec_act').slideDown();
+    }
+    else {
+        $(".foldable .active_li").css({"border-top":"1px solid #993816"})
+        $('.active').slideDown();      
+        $('.sec_act').slideUp();      
+    }
+})
 $('.foldable .sec_li').click(function () {
     if ($('.sec_act').css({ 'display':'none' })) {
         $(this).css({ 'border-top': '1px solid #993816' })
@@ -304,12 +273,32 @@ $('.foldable .active_li').click(function () {
 
 $(".products_list li").click(function(){
   $("li").removeClass("active");
-  $(this).addClass("active");
+  $(this).addClass("active").siblings().removeClass("active");
   return false;
 })
-});
-var btn= document.getElementsByClassName("click_btn");
 
+$("#plus").click( function () {
+    var value = $("#number").val();
+    value++;
+    $("#number").val(value);
+});
+
+$("#minus").click( function () {
+    var value = $("#number").val();
+    value--;
+    $("#number").val(value);
+    if($("#number").val()<=1){
+
+       $("#number").val(1);
+       
+    }
+});
+
+
+
+
+});
+var btn=document.getElementsByClassName("click_btn");
 var a;
 var up=document.getElementsByClassName("up");
 var down_i=document.getElementsByClassName("down");
@@ -319,8 +308,7 @@ for (a = 0; a < btn.length; a++) {
         if (down.style.display == "block") {
             down.style.display = "none";
             down_i.style.display="none"
-            up.style.display="block"
-            
+            up.style.display="block"       
         } else {
             down.style.display = "block";
             up.style.display="block"
@@ -328,21 +316,19 @@ for (a = 0; a < btn.length; a++) {
         }
     });
 }
+// var range_value = document.getElementById("f_range");
+// var range_value1 = document.getElementById("f_range1");
+// var result = document.getElementById("from");
+// var result1 = document.getElementById("to");
+// result.innerHTML = range_value.value;
+// result1.innerHTML = range_value1.value;
 
-
-var range_value = document.getElementById("f_range");
-var range_value1 = document.getElementById("f_range1");
-var result = document.getElementById("from");
-var result1 = document.getElementById("to");
-result.innerHTML = range_value.value;
-result1.innerHTML = range_value1.value;
-
-range_value.oninput = function() {
-  result.innerHTML = this.value;
-}
-range_value1.oninput = function() {
-  result1.innerHTML = this.value;
-}
+// range_value.oninput = function() {
+//   result.innerHTML = this.value;
+// }
+// range_value1.oninput = function() {
+//   result1.innerHTML = this.value;
+// }
 
 
 

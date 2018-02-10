@@ -374,45 +374,18 @@
         </div>
     </section>
     <section id="category">
-        <div class="container">
+        <div class="container marg">
             <div class="row">
-                <div class="col-md-6  col-sm-12 col-xs-12 padd">
+                <div class="col-md-6 col-sm-12 col-xs-12 padd">
                     <div class="slider">
                         <div class="slide_in">
-                            <div class="slide">
-                                <img src="images/drink1-b.jpg" alt="">
-                            </div>
-                            <div class="slide">
-                                <img src="images/drink3-b.jpg" alt="">
-                            </div>
-                            <div class="slide">
-                                <img src="images/porcelain4-b.jpg" alt="">
-                            </div>
-                            <div class="slide">
-                                <img src="images/porcelain7-b.jpg" alt="">
-                            </div>
-                            <div class="slide">
-                                <img src="images/porcelain8-b.jpg" alt="">
-                            </div>
+                            <div class="slide_c"><img  src="images/drink1-b.jpg" alt=""></div>
+                            <div class="slide_c"><img  src="images/drink3-b.jpg" alt=""></div>
+                            <div class="slide_c"><img  src="images/porcelain4-b.jpg" alt=""></div>
+                            <div class="slide_c"><img  src="images/porcelain7-b.jpg" alt=""></div>
+                            <div class="slide_c"><img  src="images/porcelain8-b.jpg" alt=""></div>
                         </div>
-                        <div class="slide_small">
-                            <div class="slide_s">
-                                <img class="active_img" src="images/drink1.jpg" alt="">
-                            </div>
-                            <div class="slide_s">
-                                <img src="images/drink3.jpg" alt="">
-                            </div>
-                            <div class="slide_s">
-                                <img src="images/porcelain4.jpg" alt="">
-                            </div>
-                            <div class="slide_s">
-                                <img src="images/porcelain7.jpg" alt="">
-                            </div>
-                            <div class="slide_s">
-                                <img src="images/porcelain8.jpg" alt="">
-                            </div>
-                            
-                        </div>
+                        
                         <div class="icon">
                             <a href="#" id="prev">
                                 <i class="fa fa-angle-left left"></i>
@@ -422,8 +395,28 @@
                             </a>
                         </div>
                     </div>
+                    <div class="f_small">
+                    <div class="slide_small">
+                        <div class="slide_s actives">
+                            <img src="images/drink1-b.jpg" alt="">
+                        </div>
+                        <div class="slide_s">
+                            <img src="images/drink3-b.jpg" alt="">
+                        </div>
+                        <div class="slide_s">
+                            <img src="images/porcelain4-b.jpg" alt="">
+                        </div>
+                        <div class="slide_s">
+                            <img src="images/porcelain7-b.jpg" alt="">
+                        </div>
+                        <div class="slide_s">
+                            <img src="images/porcelain8-b.jpg" alt="">
+                        </div>
+                        
+                    </div>
                 </div>
-                <div class="col-md-6 col-sm-6 col-xs-12 _right">
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12 _right">
 
                     <div class="right_site">
                         <div class="col-md-12">
@@ -439,8 +432,9 @@
                                     <i class="fa fa-truck" aria-hidden="true"></i>Buyer Protection Guaranteed</a>
                                 <div class="marg"></div>
                                 <div class="num">
-                                    <input type="number" value="0" min="0" id="numbers">
-
+                                    <input type="text" id="number" value="1" />
+                                    <button id="plus" data-inline="true">+</button>
+                                    <button id="minus" data-inline="true">-</button>
                                 </div>
 
                                 <a class="btn btn-success btn-responsive btn_res" href="#">ADD TO CART</a>
@@ -530,13 +524,14 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="big_box">
                         <div class="hide_b" >
-                            <div class="main">
-                                <div class="slide_b"><img   src="images/porcelain8-b.jpg" alt=""></div>              
+                                <div class="res_b">  
+                                <div class="slide_b"><img  src="images/porcelain8-b.jpg" alt=""></div>              
                                 <div class="slide_b"><img  src="images/drink1-b.jpg" alt=""></div>
-                                <div class="slide_b"> <img  src="images/drink3-b.jpg" alt=""></div>
+                                <div class="slide_b"> <img src="images/drink3-b.jpg" alt=""></div>
                                 <div class="slide_b"><img  src="images/porcelain4-b.jpg" alt=""></div>
                                 <div class="slide_b"><img  src="images/porcelain7-b.jpg" alt=""></div>
                             </div>
+                            
                         </div>
                         <div class="icon_b">
                             <a href="#" id="prev_b" >
@@ -545,7 +540,7 @@
                             <a href="#" id="next_b">
                                     <i class="fa fa-caret-right right_b" aria-hidden="true"></i>
                             </a>
-                        </div>
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -555,7 +550,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 ">
-                    <div class="container">
                         <div class="foldable">
                             <ul>
                                 <li class="active_li">Description
@@ -590,7 +584,6 @@
                                 <div>
                             </ul>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>
