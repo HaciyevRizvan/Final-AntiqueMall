@@ -19,41 +19,50 @@ $('.scrollup').click(function(){
     $(this).css({"color":"white"})
     return false;
 });
-setInterval(function(){ 
-var nextSlide = $(".slider_in.active").hide().removeClass("active").next(".slider_in")  
-if (nextSlide.length === 0) {
-   nextSlide = $(".slider_in").first();
-}
-  nextSlide.fadeIn().addClass("active")
-    $('#slider .text p').css({"animation":"lightSpeedIn","animation-duration":"1.5s ease-in","animation-delay":"2s"});
-   
-} ,7000);
 
-$(".right_icon").click(function(){
-    $('#slider .text p').css({"animation":"lightSpeedIn","animation-duration":"1s"});
 
-var nextSlide =  $(".slider_in.active").hide().removeClass("active").next(".slider_in").addClass("active")
-
- if (nextSlide.length === 0){
-   nextSlide = $(".slider_in").first().fadeIn();
-}
-nextSlide.fadeIn().addClass("active");
-$('#slider .text p').css({"animation":"lightSpeedIn","animation-duration":"1.5s ease-in","animation-delay":"2s"});
-
-});
-var index=0;
-$(".left_icon").click(function(){
-    $('#slider .text p').css({"animation":"lightSpeedIn","animation-duration":"1s"});
- 
-    var nextSlide =  $(".slider_in.active").hide().removeClass("active").next(".slider_in").addClass("active")
-     if (nextSlide.length === 0) {
-       nextSlide = $(".slider_in").first().fadeIn();
-       index=0;
+ images=document.querySelectorAll('.slider_in')
+ var index=0;
+function reset(){
+    for( i=0;i<images.length;i++){
+        images[i].style.display="none"
     }
-    nextSlide.fadeIn().addClass("active");
-    $('#slider .text p').css({"animation":"lightSpeedIn","animation-duration":"1.5s ease-in","animation-delay":"2s"});
-  
+}
+function startslide(){
+    reset();
+    images[0].style.display="block"
+    $("#slider .text p").css({"animation-name":"lightSpeedIn","animation-duration":"1s",})
+
+}
+$(".right_icon").click(function(){
+    if(index==images.length-1){
+        index=-1;
+    }
+    reset();
+    images[index+1].style.display="block"
+    index++;  
+    
+});
+$(".left_icon").click(function(){
+    
+    if(index==0){
+        index=images.length;
+    }
+    reset();
+    images[index-1].style.display="block"
+    index--;
     });
+    
+    setInterval(function(){ 
+        if(index==images.length-1){
+            index=-1;
+        }
+        reset();
+        images[index+1].style.display="block"
+        index++;
+       
+    } ,8500);
+    startslide();
 // Accord
 $(".registr_c").click(function(){
     
@@ -271,11 +280,42 @@ $('.foldable .active_li').click(function () {
     }
 })
 
-$(".products_list li").click(function(){
-  $("li").removeClass("active");
-  $(this).addClass("active").siblings().removeClass("active");
-  return false;
+
+$(".sech").click(function(){ 
+     $(".sech.active").removeClass("active");
+     $(this).addClass("active").siblings().removeClass("active");
+    return false;
 })
+var click=true;
+if(click=true){
+    $("#all").click(function(){
+    
+        $(".paddg").css({"display":"none"});
+        $(".paddg.all").css({"display":"block"});
+      })
+      $("#vase").click(function(){
+        $(".paddg").css({"display":"none"});
+          $(".paddg.vase").css({"display":"block"});
+      })
+      $("#clock").click(function(){
+        $(".paddg").css({"display":"none"});
+        $(".paddg.clock").css({"display":"block"});
+      })
+      $("#tableware").click(function(){
+        $(".paddg").css({"display":"none"});
+        $(".paddg.tableware").css({"display":"block"});
+      })
+      $("#paintings").click(function(){
+        $(".paddg").css({"display":"none"});
+        $(".paddg.paintings").css({"display":"block"});
+      })   
+      click=false;
+} 
+ else{
+    $(".paddg.all").css({"display":"block"})
+    click=false;
+       
+}
 
 $("#plus").click( function () {
     var value = $("#number").val();
@@ -316,19 +356,19 @@ for (a = 0; a < btn.length; a++) {
         }
     });
 }
-// var range_value = document.getElementById("f_range");
-// var range_value1 = document.getElementById("f_range1");
-// var result = document.getElementById("from");
-// var result1 = document.getElementById("to");
-// result.innerHTML = range_value.value;
-// result1.innerHTML = range_value1.value;
+var range_value = document.getElementById("f_range");
+var range_value1 = document.getElementById("f_range1");
+var result = document.getElementById("from");
+var result1 = document.getElementById("to");
+result.innerHTML = range_value.value;
+result1.innerHTML = range_value1.value;
 
-// range_value.oninput = function() {
-//   result.innerHTML = this.value;
-// }
-// range_value1.oninput = function() {
-//   result1.innerHTML = this.value;
-// }
+range_value.oninput = function() {
+  result.innerHTML = this.value;
+}
+range_value1.oninput = function() {
+  result1.innerHTML = this.value;
+}
 
 
 
