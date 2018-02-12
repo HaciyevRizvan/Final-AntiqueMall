@@ -46,6 +46,25 @@ body {
         transform: 1s ease; }
       #first_list ul li a .place {
         padding-right: 10px; }
+        #first_list ul li a .place:hover {
+          color: #993816;
+          transition: .5s; }
+          #first_list ul li a .place:hover .itemB {
+            display: block; }
+#first_list .itemB {
+  width: 33%;
+  height: 80px;
+  border: 1px solid #ece8e8;
+  background: white;
+  text-align: left;
+  position: absolute;
+  right: 45px;
+  margin-top: 77px;
+  box-shadow: 3px 3px 10px -2px #5c5c5c;
+  color: #993816;
+  padding: 20px 0px 0px 13px;
+  border-radius: 3px;
+  display: none; }
 
 #menu {
   background: #993816;
@@ -151,7 +170,7 @@ body {
         #menu .pages .text .text_t ul {
           padding-left: 0px; }
           #menu .pages .text .text_t ul .statistics {
-            border: 1px solid white;
+            border: 2px solid white;
             font-weight: bold;
             border-radius: 50%;
             width: 70px;
@@ -659,6 +678,13 @@ body {
       text-transform: uppercase;
       font-size: 24px;
       padding-bottom: 50px; }
+    #gallery .text h4 a {
+      text-decoration: none;
+      color: gray;
+      cursor: pointer; }
+      #gallery .text h4 a:hover {
+        color: #993816;
+        transition: 0.5s; }
   #gallery .products_list {
     padding-bottom: 40px; }
     #gallery .products_list ul {
@@ -686,6 +712,14 @@ body {
     display: none; }
   #gallery .row_all .paintings {
     display: none; }
+  #gallery .row_all .vaseb {
+    display: none; }
+  #gallery .row_all .clockb {
+    display: none; }
+  #gallery .row_all .tablewareb {
+    display: none; }
+  #gallery .row_all .paintingsb {
+    display: none; }
   #gallery .row_all .paddg .antic {
     text-align: center;
     position: relative;
@@ -701,6 +735,8 @@ body {
           transition: 0.2s;
           text-decoration: none;
           cursor: pointer; }
+        #gallery .row_all .paddg .antic h4 a .seca {
+          font-size: 14px; }
     #gallery .row_all .paddg .antic:hover {
       transition: all 3s ease-in; }
       #gallery .row_all .paddg .antic:hover .box {
@@ -741,6 +777,63 @@ body {
     #gallery .row_all .paddg .antic img {
       max-width: 100%;
       height: auto; }
+  #gallery .row_all .paddgb .antic {
+    text-align: center;
+    position: relative;
+    box-sizing: border-box; }
+    #gallery .row_all .paddgb .antic h4 {
+      font-weight: 400;
+      padding-top: 20px;
+      font-size: 15px; }
+      #gallery .row_all .paddgb .antic h4 .seca {
+        font-size: 14px; }
+      #gallery .row_all .paddgb .antic h4 a {
+        color: #222; }
+        #gallery .row_all .paddgb .antic h4 a:hover {
+          color: #993816;
+          transition: 0.2s;
+          text-decoration: none;
+          cursor: pointer; }
+    #gallery .row_all .paddgb .antic:hover {
+      transition: all 3s ease-in; }
+      #gallery .row_all .paddgb .antic:hover .box {
+        display: block; }
+    #gallery .row_all .paddgb .antic p {
+      color: #993816;
+      font-weight: 400;
+      font-size: 21px; }
+    #gallery .row_all .paddgb .antic .box {
+      width: 100%;
+      background: rgba(18, 18, 18, 0.52);
+      height: 81%;
+      position: absolute;
+      top: 0;
+      z-index: 0;
+      display: none;
+      cursor: pointer; }
+      #gallery .row_all .paddgb .antic .box ul {
+        padding: 0;
+        list-style: none;
+        margin-top: 45%; }
+        #gallery .row_all .paddgb .antic .box ul li {
+          display: inline-block;
+          color: #5e5e5e;
+          background: white;
+          padding: 10px 12px;
+          margin: 0 3px;
+          border-radius: 50%; }
+          #gallery .row_all .paddgb .antic .box ul li:hover {
+            background: #993816;
+            transition: all 0.3s; }
+            #gallery .row_all .paddgb .antic .box ul li:hover i {
+              color: white; }
+          #gallery .row_all .paddgb .antic .box ul li a {
+            color: gray; }
+            #gallery .row_all .paddgb .antic .box ul li a i {
+              font-size: 17px; }
+    #gallery .row_all .paddgb .antic img {
+      max-width: 100%;
+      height: auto; }
   #gallery .btn_res {
     background: #993816;
     border: 1px solid #993816;
@@ -756,6 +849,162 @@ body {
       cursor: pointer; }
     #gallery .btn_res i {
       padding-left: 10px; }
+  #gallery .btn_respons {
+    background: #993816;
+    border: 1px solid #993816;
+    border-radius: 20px;
+    padding: 5px 40px;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center; }
+    #gallery .btn_respons:hover {
+      background: #c74a1d;
+      transition: 0.2s;
+      cursor: pointer; }
+    #gallery .btn_respons i {
+      padding-left: 10px; }
+  #gallery .compare {
+    position: fixed;
+    top: 90px;
+    z-index: 1100;
+    background: rgba(99, 98, 98, 0.76);
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: none;
+    cursor: pointer;
+    z-index: 1200; }
+    #gallery .compare .bord {
+      width: 88%;
+      height: 590px;
+      background: #8c8d8c;
+      border: 12px solid #363434;
+      margin-top: 3%;
+      margin-left: 4.7%;
+      position: relative; }
+      #gallery .compare .bord .reg {
+        text-align: left;
+        width: 100%;
+        height: 530px;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        cursor: text;
+        overflow-y: scroll;
+        border-radius: 5px;
+        border: 1px solid gray;
+        padding: 5px 0px 0px 5px;
+        position: relative; }
+        #gallery .compare .bord .reg p {
+          width: 100%;
+          color: white;
+          background: #4a4b4a;
+          padding: 7px;
+          margin: 0px; }
+        #gallery .compare .bord .reg .visibleBox {
+          width: 40%;
+          height: 540px;
+          background: #f6f6f6;
+          position: relative;
+          margin-left: 27%;
+          padding-top: 10px; }
+          #gallery .compare .bord .reg .visibleBox h4 {
+            text-align: center;
+            color: gray;
+            font-size: 15px; }
+          #gallery .compare .bord .reg .visibleBox .removeV {
+            padding-left: 5px;
+            color: red;
+            font-size: 15px;
+            cursor: pointer; }
+          #gallery .compare .bord .reg .visibleBox .visibleImgBox {
+            width: 160px;
+            height: 160px;
+            border: 1px solid lightgray;
+            background: red;
+            margin: 3% 0 0 33%; }
+            #gallery .compare .bord .reg .visibleBox .visibleImgBox img {
+              width: 100%; }
+          #gallery .compare .bord .reg .visibleBox .visPrice {
+            text-align: center; }
+            #gallery .compare .bord .reg .visibleBox .visPrice h3 {
+              color: gray;
+              font-size: 15px;
+              margin-bottom: 10px; }
+            #gallery .compare .bord .reg .visibleBox .visPrice .visibleNumber {
+              color: gray;
+              font-size: 15px;
+              text-decoration: underline;
+              cursor: text;
+              display: inline-block; }
+            #gallery .compare .bord .reg .visibleBox .visPrice .visBtn {
+              background: #4a4b4a;
+              color: white;
+              display: inherit;
+              width: 130px;
+              outline: none;
+              margin-left: 36%;
+              margin-top: 13px;
+              border: 1px solid #4a4b4a; }
+              #gallery .compare .bord .reg .visibleBox .visPrice .visBtn:hover {
+                background: #7c7e7c;
+                border: 1px solid #7c7e7c; }
+            #gallery .compare .bord .reg .visibleBox .visPrice .visText {
+              color: gray;
+              background: transparent;
+              font-size: 12.5px;
+              padding: 0px; }
+            #gallery .compare .bord .reg .visibleBox .visPrice .lines {
+              color: lightgray;
+              background: lightgray;
+              width: 169%;
+              position: relative;
+              left: -318px;
+              border: 1px solid lightgray;
+              border-radius: 5px;
+              margin-top: 5px;
+              margin-bottom: 5px; }
+            #gallery .compare .bord .reg .visibleBox .visPrice .visText.p {
+              color: #2bdd7b;
+              background: transparent;
+              font-size: 15px;
+              padding: 0px;
+              padding: 7px 0px 7px 0px; }
+            #gallery .compare .bord .reg .visibleBox .visPrice .visText.minus {
+              color: gray;
+              background: transparent;
+              font-size: 14px;
+              padding: 0px;
+              padding: 7px 0px 7px 0px; }
+            #gallery .compare .bord .reg .visibleBox .visPrice .visText.NA {
+              color: gray;
+              background: transparent;
+              font-size: 14px;
+              padding: 0px;
+              padding: 7px 0px 7px 0px; }
+        #gallery .compare .bord .reg .visLeft {
+          position: absolute;
+          left: 0;
+          top: 69.9%; }
+          #gallery .compare .bord .reg .visLeft p {
+            background: transparent;
+            color: gray; }
+        #gallery .compare .bord .reg .visText.pL {
+          padding: 0px;
+          padding: 17px 0px 19px 7px; }
+        #gallery .compare .bord .reg .visText.minusL {
+          padding: 7px 0px 17px 7px; }
+        #gallery .compare .bord .reg .visText.NAL {
+          padding: 7px 0px 7px 7px; }
+      #gallery .compare .bord .close_r {
+        position: absolute;
+        bottom: 0px;
+        right: 10px;
+        font-size: 40px; }
+        #gallery .compare .bord .close_r:hover {
+          color: #993816; }
 
 #banner .top {
   padding-top: 50px; }
@@ -1145,7 +1394,8 @@ body {
       position: relative;
       line-height: 2.8;
       margin-top: 30px;
-      padding: 0px 10px 0px 10px; }
+      padding: 0px 10px 0px 10px;
+      outline: none; }
     #paint_gallery .left_side .search_part .search_icon {
       color: gray;
       position: absolute;
@@ -2701,10 +2951,6 @@ body {
   to {
     transform: none;
     opacity: 1; } }
-.lightSpeedIn {
-  animation-name: lightSpeedIn;
-  animation-timing-function: ease-in-out; }
-
 @media only screen and (max-width: 1200px) {
   #start_selling .for_b .box {
     left: 25px;
@@ -2734,16 +2980,30 @@ body {
     #description .sec_act .submit_box .btn_res {
       margin-right: 44%; } }
 @media only screen and (max-width: 1170px) {
-  #slider .padd .text h1 {
+  #slider .paddS .text .matrix h1 {
     font-size: 50px; }
-
-  #slider .padd .text p {
+  #slider .paddS .text p {
     width: 77%;
     margin-left: 10%; }
 
   #gallery .antic .box ul {
     left: 0;
     margin-top: 38%; }
+  #gallery .compare .bord .reg .visLeft {
+    display: none; }
+  #gallery .compare .bord .reg .visibleBox {
+    margin-left: 0;
+    width: 100%; }
+    #gallery .compare .bord .reg .visibleBox h4 {
+      text-align: left; }
+    #gallery .compare .bord .reg .visibleBox .visibleImgBox {
+      margin-left: 0px; }
+    #gallery .compare .bord .reg .visibleBox .visPrice {
+      text-align: left; }
+      #gallery .compare .bord .reg .visibleBox .visPrice h3 {
+        text-align: left; }
+      #gallery .compare .bord .reg .visibleBox .visPrice .visBtn {
+        margin-left: 0; }
 
   #start_selling .for_b .box {
     left: 25px;
@@ -2826,12 +3086,34 @@ body {
   .logo_part {
     padding: 0px; }
 
-  #slider .padd .text .matrix h1 {
+  #slider .paddS .text .matrix h1 {
     font-size: 50px; }
-
-  #slider .padd .text p {
+  #slider .paddS .text .matrix p {
     width: 77%;
     margin-left: 10%; }
+
+  #gallery .compare .bord .reg .visLeft {
+    display: none; }
+  #gallery .compare .bord .reg .visibleBox {
+    margin-left: 0;
+    width: 100%; }
+    #gallery .compare .bord .reg .visibleBox h4 {
+      text-align: left; }
+    #gallery .compare .bord .reg .visibleBox .visibleImgBox {
+      margin-left: 0px; }
+    #gallery .compare .bord .reg .visibleBox .visPrice {
+      text-align: left; }
+      #gallery .compare .bord .reg .visibleBox .visPrice h3 {
+        text-align: left; }
+      #gallery .compare .bord .reg .visibleBox .visPrice .visBtn {
+        margin-left: 0; }
+  #gallery .row_all .paddgb .antic .box ul {
+    margin-top: 39%; }
+  #gallery .row_all .paddg .antic .box ul {
+    margin-top: 39%; }
+
+  #paint_gallery .right_side .antic .box ul {
+    margin-top: 39%; }
 
   #menu .second {
     display: none; }
@@ -2987,10 +3269,9 @@ body {
     top: 5%;
     left: 33%; }
 
-  #slider .padd .text .matrix h1 {
+  #slider .paddS .text .matrix h1 {
     font-size: 34px; }
-
-  #slider .padd .text p {
+  #slider .paddS .text p {
     width: 100%;
     margin-left: 0px;
     font-size: 12px;
@@ -3010,6 +3291,9 @@ body {
   #gallery .paddg {
     width: 50%;
     padding: 0; }
+  #gallery .paddgb {
+    width: 50%;
+    padding: 0; }
   #gallery .products_list ul .active {
     display: block; }
   #gallery .products_list ul li {
@@ -3020,6 +3304,23 @@ body {
     height: 79%; }
   #gallery .antic h4 {
     font-size: 13px; }
+  #gallery .compare .bord .reg .visLeft {
+    display: none; }
+  #gallery .compare .bord .reg .visibleBox {
+    margin-left: 0;
+    width: 100%; }
+    #gallery .compare .bord .reg .visibleBox h4 {
+      text-align: left; }
+    #gallery .compare .bord .reg .visibleBox .visibleImgBox {
+      margin-left: 0px; }
+    #gallery .compare .bord .reg .visibleBox .visPrice {
+      text-align: left; }
+      #gallery .compare .bord .reg .visibleBox .visPrice h3 {
+        text-align: left; }
+      #gallery .compare .bord .reg .visibleBox .visPrice .visBtn {
+        margin-left: 0; }
+      #gallery .compare .bord .reg .visibleBox .visPrice .lines {
+        width: 200%; }
 
   #paint_gallery .right_side .padd {
     width: 50%;
@@ -3029,7 +3330,8 @@ body {
     right: 0px; }
   #paint_gallery .sorting p {
     position: relative;
-    top: 40px; }
+    top: 40px;
+    text-align: center; }
 
   #footer .contact {
     margin-left: 25%; }
@@ -3142,7 +3444,7 @@ body {
 
   #slider .icon {
     display: none; }
-  #slider .padd .text p {
+  #slider .paddS .text p {
     width: 100%;
     margin-left: 0px; }
 
@@ -3152,20 +3454,49 @@ body {
   #start_selling .f_box .box_line {
     display: none; }
 
-  #gallery .paddg {
+  #gallery .row_all .paddg {
     width: 100%; }
+    #gallery .row_all .paddg .antic img {
+      width: 100%; }
+    #gallery .row_all .paddg .antic .box {
+      height: 85%; }
+      #gallery .row_all .paddg .antic .box ul {
+        margin-top: 42.5%; }
+      #gallery .row_all .paddg .antic .box .products_list ul .active {
+        display: block; }
+      #gallery .row_all .paddg .antic .box .products_list ul li {
+        display: none; }
+  #gallery .row_all .paddgb {
+    width: 100%; }
+    #gallery .row_all .paddgb .antic img {
+      width: 100%; }
+    #gallery .row_all .paddgb .antic .box {
+      height: 85%; }
+      #gallery .row_all .paddgb .antic .box ul {
+        margin-top: 42.5%; }
+      #gallery .row_all .paddgb .antic .box .products_list ul .active {
+        display: block; }
+      #gallery .row_all .paddgb .antic .box .products_list ul li {
+        display: none; }
   #gallery .padd_res {
     width: 100%; }
-  #gallery .antic img {
+  #gallery .compare .bord .reg .visLeft {
+    display: none; }
+  #gallery .compare .bord .reg .visibleBox {
+    margin-left: 0;
     width: 100%; }
-  #gallery .antic .box {
-    height: 85%; }
-    #gallery .antic .box ul {
-      margin-top: 42.5%; }
-    #gallery .antic .box .products_list ul .active {
-      display: block; }
-    #gallery .antic .box .products_list ul li {
-      display: none; }
+    #gallery .compare .bord .reg .visibleBox h4 {
+      text-align: left; }
+    #gallery .compare .bord .reg .visibleBox .visibleImgBox {
+      margin-left: 0px; }
+    #gallery .compare .bord .reg .visibleBox .visPrice {
+      text-align: left; }
+      #gallery .compare .bord .reg .visibleBox .visPrice h3 {
+        text-align: left; }
+      #gallery .compare .bord .reg .visibleBox .visPrice .visBtn {
+        margin-left: 0; }
+      #gallery .compare .bord .reg .visibleBox .visPrice .lines {
+        width: 800%; }
 
   #footer .latest_section .contact {
     margin-bottom: 20px; }
@@ -3191,6 +3522,14 @@ body {
     padding: 0;
     list-style: none;
     margin-top: 29%; }
+  #paint_gallery .left_side .products .text a {
+    position: relative;
+    top: 7px;
+    font-size: 10.6px; }
+  #paint_gallery .left_side .products .text .f_shop {
+    margin-top: 10px; }
+  #paint_gallery .left_side .product_tags ul li {
+    padding: 5px 2px; }
 
   #paint_slider .slide .text h1 {
     font-size: 20px; }
@@ -3303,12 +3642,14 @@ body {
 
   #slider .icon {
     display: none; }
-  #slider .padd .text {
+  #slider .paddS .text {
     display: none; }
-  #slider .padd .icon {
+  #slider .paddS .icon {
     display: none; }
 
   #gallery .paddg {
+    width: 100%; }
+  #gallery .paddgb {
     width: 100%; }
   #gallery .padd_res {
     width: 100%; }
@@ -3318,6 +3659,21 @@ body {
     display: none; }
   #gallery .antic .box ul li {
     padding: 10px 12px; }
+  #gallery .compare .bord .reg .visLeft {
+    display: none; }
+  #gallery .compare .bord .reg .visibleBox {
+    margin-left: 0;
+    width: 100%; }
+    #gallery .compare .bord .reg .visibleBox h4 {
+      text-align: left; }
+    #gallery .compare .bord .reg .visibleBox .visibleImgBox {
+      margin-left: 0px; }
+    #gallery .compare .bord .reg .visibleBox .visPrice {
+      text-align: left; }
+      #gallery .compare .bord .reg .visibleBox .visPrice h3 {
+        text-align: left; }
+      #gallery .compare .bord .reg .visibleBox .visPrice .visBtn {
+        margin-left: 0; }
 
   #start_selling .for_b .padd .circle_line {
     margin-left: 3px; }
@@ -3357,8 +3713,23 @@ body {
   #paint_gallery .right_side .antic .box .padd {
     width: 100%;
     padding: 0; }
-  #paint_gallery .right_side .antic .left_side .product_tags ul li {
+  #paint_gallery .left_side .products .text a {
+    position: relative;
+    top: 0px;
+    font-size: 8.6px; }
+  #paint_gallery .left_side .products .text .f_shop {
+    margin-top: 10px; }
+  #paint_gallery .left_side .product_tags ul li {
     padding: 5px 2px; }
+    #paint_gallery .left_side .product_tags ul li a {
+      font-size: 12px; }
+  #paint_gallery .left_side .amounts {
+    position: relative;
+    top: -40px; }
+    #paint_gallery .left_side .amounts .sub_btn {
+      float: none;
+      position: relative;
+      top: 56px; }
 
   #about .box {
     display: none; }
