@@ -284,20 +284,15 @@ $('.foldable .active_li').click(function () {
 $(".sech").click(function(){ 
      $(".sech.active").removeClass("active");
      $(this).addClass("active").siblings().removeClass("active");
-    return false;
-})
-var click=true;
-if(click=true){
     $("#all").click(function(){
-    
         $(".paddg").css({"display":"none"});
         $(".paddg.all").css({"display":"block"});
       })
       $("#vase").click(function(){
         $(".paddg").css({"display":"none"});
-          $(".paddg.vase").css({"display":"block"});
+          $(".paddg.vase").css({"display":"block"}); 
       })
-      $("#clock").click(function(){
+      $("#clock").click(function(){   
         $(".paddg").css({"display":"none"});
         $(".paddg.clock").css({"display":"block"});
       })
@@ -309,14 +304,8 @@ if(click=true){
         $(".paddg").css({"display":"none"});
         $(".paddg.paintings").css({"display":"block"});
       })   
-      click=false;
-} 
- else{
-    $(".paddg.all").css({"display":"block"})
-    click=false;
-       
-}
-
+    })
+ 
 $("#plus").click( function () {
     var value = $("#number").val();
     value++;

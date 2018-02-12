@@ -741,13 +741,6 @@ body {
     #gallery .row_all .paddg .antic img {
       max-width: 100%;
       height: auto; }
-  #gallery .l_antic {
-    padding-bottom: 40px;
-    text-align: center;
-    position: relative;
-    box-sizing: border-box; }
-    #gallery .l_antic .padd {
-      padding: 0px; }
   #gallery .btn_res {
     background: #993816;
     border: 1px solid #993816;
@@ -762,21 +755,6 @@ body {
       transition: 0.2s;
       cursor: pointer; }
     #gallery .btn_res i {
-      padding-left: 10px; }
-  #gallery .btn_respons {
-    background: #993816;
-    border: 1px solid #993816;
-    border-radius: 20px;
-    padding: 5px 40px;
-    margin-top: 70px;
-    font-size: 20px;
-    font-weight: 600;
-    text-align: center; }
-    #gallery .btn_respons:hover {
-      background: #c74a1d;
-      transition: 0.2s;
-      cursor: pointer; }
-    #gallery .btn_respons i {
       padding-left: 10px; }
 
 #banner .top {
