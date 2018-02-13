@@ -573,7 +573,7 @@
 @keyframes fadeInDown {
   from {
     opacity: 0;
-    transform: translate3d(0, -500%, 0);
+    transform: translate3d(0, -20%, 0);
     
   }
 
@@ -581,12 +581,14 @@
     opacity: 1;
     transform: none;
     
+    
   }
 }
 
 .fadeInDown {
   animation-name: fadeInDown;
 }
+
 
 @keyframes fadeInDownBig {
   from {
@@ -979,13 +981,16 @@
 
 @keyframes lightSpeedIn {
   from {
-    transform: translate3d(200%, 0, 0) skewX(-30deg);
+    transform: translate3d(-200%, 0, 0) skewX(-30deg);
     opacity: 0;
+    margin-left:100%;
+    
   }
 
   60% {
     transform: skewX(-40deg);
     opacity: 1;
+   
   }
 
   80% {
@@ -996,6 +1001,7 @@
   to {
     transform: none;
     opacity: 1;
+    margin-left:25%;
   }
 }
 
