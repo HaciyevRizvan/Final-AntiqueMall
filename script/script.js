@@ -112,8 +112,7 @@ $(document).ready(function () {
         bwidth = $(".slide_b").width();
         slideB = bwidth;
         blength = $(".res_b").children().length;
-        slideS=$("slide_s").width($(".slide_s img").width());
-        slideS=smallwidth
+       
     }
     sliderInit();
     $(window).on('resize', function () {

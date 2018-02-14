@@ -2719,7 +2719,7 @@ body {
         font-size: 40px;
         color: gray; }
   #category .marg .padd .f_small {
-    width: 100%;
+    width: 550px;
     position: relative;
     margin-top: 15px;
     overflow: hidden; }
@@ -2727,12 +2727,12 @@ body {
       max-width: 550px; }
       #category .marg .padd .f_small .slide_small .slide_s {
         float: left;
-        max-width: 20%;
+        width: 20%;
         margin: 5px 0px 5px 0px;
         cursor: pointer;
         box-sizing: border-box; }
         #category .marg .padd .f_small .slide_small .slide_s img {
-          width: 100%; }
+          max-width: 100%; }
       #category .marg .padd .f_small .slide_small .slide_s.actives {
         border: 1px solid #993816; }
   #category .marg ._right {
