@@ -2647,8 +2647,7 @@ body {
     cursor: zoom-in; }
     #b_slider .big_box .hide_b {
       max-width: 550px;
-      position: relative;
-      margin: 5% 27%;
+      margin: 37px 27%;
       z-index: 100;
       overflow: hidden; }
       #b_slider .big_box .hide_b .res_b {
@@ -2719,12 +2718,12 @@ body {
         font-size: 40px;
         color: gray; }
   #category .marg .padd .f_small {
-    width: 550px;
+    width: 100%;
     position: relative;
     margin-top: 15px;
     overflow: hidden; }
     #category .marg .padd .f_small .slide_small {
-      max-width: 550px; }
+      width: 125%; }
       #category .marg .padd .f_small .slide_small .slide_s {
         float: left;
         width: 20%;
@@ -2732,7 +2731,7 @@ body {
         cursor: pointer;
         box-sizing: border-box; }
         #category .marg .padd .f_small .slide_small .slide_s img {
-          max-width: 100%; }
+          width: 100%; }
       #category .marg .padd .f_small .slide_small .slide_s.actives {
         border: 1px solid #993816; }
   #category .marg ._right {
@@ -3474,7 +3473,7 @@ body {
       width: 45%; }
 
   #b_slider .big_box .hide_b {
-    width: 70%;
+    margin-top: 10%;
     margin-left: 15%; }
 
   #new .fmarg {
@@ -3680,10 +3679,12 @@ body {
   #description .sec_act .submit_box {
     height: 100vh; }
 
-  #b_slider .big_box .hide_b .icon_b .left_b {
-    font-size: 34px; }
-  #b_slider .big_box .hide_b .icon_b .right_b {
-    font-size: 40px; }
+  #b_slider .big_box .hide_b {
+    margin-top: 30%; }
+    #b_slider .big_box .hide_b .icon_b .left_b {
+      font-size: 34px; }
+    #b_slider .big_box .hide_b .icon_b .right_b {
+      font-size: 40px; }
 
   #new .blog_box {
     padding-top: 0px; }
@@ -3877,11 +3878,14 @@ body {
     #menu .reset_page .reg .btn_res {
       font-size: 12px; }
 
-  #b_slider .big_box .hide_b .icon_b .left_b {
-    font-size: 34px; }
-  #b_slider .big_box .hide_b .icon_b .right_b {
-    font-size: 34px;
-    margin-right: 7%; }
+  #b_slider .big_box .hide_b {
+    margin-top: 62%;
+    margin-left: 20%; }
+    #b_slider .big_box .hide_b .icon_b .left_b {
+      font-size: 34px; }
+    #b_slider .big_box .hide_b .icon_b .right_b {
+      font-size: 34px;
+      margin-right: 7%; }
 
   #new .fmarg {
     margin: 0px; }

@@ -112,7 +112,12 @@ $(document).ready(function () {
         bwidth = $(".slide_b").width();
         slideB = bwidth;
         blength = $(".res_b").children().length;
-       
+        slideS=$(".f_small").width(550);
+        slideSm=$(".slide_small").width(690);
+        // slideSImg=$(".slide_s").width(134);
+        // slideSImg=smallwidth;
+        console.log(slideS);
+        console.log(slideSm);
     }
     sliderInit();
     $(window).on('resize', function () {
@@ -120,17 +125,23 @@ $(document).ready(function () {
         sliderInit();
     })
     //---------------------------------------- resize function--------------------------------
+
+    
+
+
     //--------------------------------next click function----------------------------------
     $("#next").click(function () {
         prev++;
         margin += newwidth;
         small += smallwidth;
+        $(".slide_s:last-child").addClass("actives") 
         if (prev >= length) {
             margin = newwidth * (length - 1);
             small = smallwidth * (smallength - 1);
              prev=length;
             $(".big_box").css({ "visibility": "visible" });
-            $(".slide_s:last-chid").addClass("actives") 
+            $("html").css({ "overflow": "hidden" });
+
         }
         $(".slide_c img").css({ "margin-left": -margin, "transition": "0.3s ease" })
         $(".slide_small").css({ "margin-left": -small, "transition": "0.3s ease" })
@@ -147,7 +158,7 @@ $(document).ready(function () {
     //------------------next_click function-------------------------
     function nextb_click() {
         prev_b++;
-        swipe += bwidth;
+        swipe += bwidth; 
         if (prev_b >= blength) {
             swipe = 0;
             prev_b = 0
@@ -166,32 +177,38 @@ $(document).ready(function () {
       
     }
     //-------------------------- b slide--------------------------
-    $("#next_b").click(function () {
-        nextb_click();
-        
-    })
     $(".slide_b img").click(function () {
         nextb_click();
+    
       
+    })
+    $("#next_b").click(function () {
+        nextb_click();
+        return false;
+        
     })
     $("#prev_b").click(function () {
         prevb_click()
+        return false;
       
     })
+
     //------------------------ b slide--------------------------------
 
     //---------------------------- prev click-----------------------------
-    eq=$(".slide_s").eq(0)
+
     $("#prev").click(function () {
         prev--;
         margin -= newwidth;
         small -= smallwidth;
+        $(".slide_small:first-child").addClass("actives")
         if (prev <= 0) {
             margin = 0;
             small = 0;
-            prev=0;
+            prev=0;      
             $(".big_box").css({ "visibility": "visible" });
             $("html").css({ "overflow": "hidden" });
+            
         
         }
         $(".slide_c img").css({ "marginLeft": -margin, "transition": "0.3s ease" })
@@ -208,16 +225,33 @@ $(document).ready(function () {
             $("html").css({ "overflow": "scroll" });
         }
     });
-    eq = $(".slide_s").eq();
-    //slide_s click function
-    $(".slide_s").click(function () {
+//     eq = $(".slide_s").eq();
+// $('.slide_s img').click(function() {
+//         var source= $(this).attr('src');
+//         $('.slide_c').fadeTo('slow',0.6,function() {
+//           $(this).css({
+//             'background-image' : 'url(' + source + ')',
+//             "marginLeft":-margin,
+//           })
+//         }).fadeTo('slow',1)
+    
+//       })
+
+  
+    $(".slide_s img").click(function () {
         prev++;
         margin += newwidth;
         small += smallwidth;
+        var source= $(this).attr('src');
+       
         if (prev >= length) {
             margin = newwidth * 4;
             small = smallwidth * 4;
+            prev=length;
+            $(".slide_small:last-chid").addClass("actives")
         }
+        var slidesmall=$(".slide_small").index();
+ 
         $(".slide_c img").css({ "marginLeft": -margin, "transition": "0.3s ease" });
         $(".slide_small").css({ "margin-left": -small, "transition": "0.3s ease" });
         $(".slide_s.actives").removeClass("actives").next(this).addClass("actives");
