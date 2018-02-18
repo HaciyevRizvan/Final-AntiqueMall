@@ -6,24 +6,23 @@ $(document).ready(function () {
     $(".close").click(function () {
         $(".swipe").css({ "left": "-285px", "transition": "0.5s" })
     })
+
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 130) {
-            $('.scrollup').fadeIn();
+        if ($(this).scrollTop() > 300) {
+            $(".scrollup").fadeIn();
         } else {
-            $('.scrollup').fadeOut();
+            $(".scrollup").fadeOut();
             return false;
         }
     });
+
+
+
     $('.scrollup').click(function () {
         $('html, body').animate({ scrollTop: 0 }, 800);
         $(this).css({ "color": "white" })
         return false;
     });
-
-
-   
-
-
     // Accord
     $(".registr_c").click(function () {
 
@@ -91,11 +90,9 @@ $(document).ready(function () {
         if (event.target.className == "compare") {
             $(".compare").fadeOut(500);
         }
-
     });
     $(".close_r").click(function () {
         $(".compare").fadeOut();
-
     })
 
     //---------------------------------------- resize function--------------------------------
@@ -112,12 +109,7 @@ $(document).ready(function () {
         bwidth = $(".slide_b").width();
         slideB = bwidth;
         blength = $(".res_b").children().length;
-        slideS=$(".f_small").width(550);
-        slideSm=$(".slide_small").width(690);
-        // slideSImg=$(".slide_s").width(134);
-        // slideSImg=smallwidth;
-        console.log(slideS);
-        console.log(slideSm);
+        slideS = $(".f_small").width(550);
     }
     sliderInit();
     $(window).on('resize', function () {
@@ -126,22 +118,20 @@ $(document).ready(function () {
     })
     //---------------------------------------- resize function--------------------------------
 
-    
-
-
     //--------------------------------next click function----------------------------------
     $("#next").click(function () {
         prev++;
         margin += newwidth;
         small += smallwidth;
-        $(".slide_s:last-child").addClass("actives") 
+
         if (prev >= length) {
             margin = newwidth * (length - 1);
             small = smallwidth * (smallength - 1);
-             prev=length;
+            prev = length;
             $(".big_box").css({ "visibility": "visible" });
             $("html").css({ "overflow": "hidden" });
-
+            return false;
+            $(".slide_s:last-child").addClass("actives")
         }
         $(".slide_c img").css({ "margin-left": -margin, "transition": "0.3s ease" })
         $(".slide_small").css({ "margin-left": -small, "transition": "0.3s ease" })
@@ -158,13 +148,12 @@ $(document).ready(function () {
     //------------------next_click function-------------------------
     function nextb_click() {
         prev_b++;
-        swipe += bwidth; 
+        swipe += bwidth;
         if (prev_b >= blength) {
             swipe = 0;
             prev_b = 0
         }
         $(".slide_b img").css({ "margin-left": -swipe })
-        
     }
     function prevb_click() {
         prev_b--;
@@ -174,48 +163,44 @@ $(document).ready(function () {
             prev_b = blength;
         }
         $(".slide_b img").css({ "margin-left": -swipe })
-      
+
     }
     //-------------------------- b slide--------------------------
     $(".slide_b img").click(function () {
         nextb_click();
-    
-      
     })
     $("#next_b").click(function () {
         nextb_click();
         return false;
-        
+
     })
     $("#prev_b").click(function () {
         prevb_click()
         return false;
-      
-    })
 
+    })
     //------------------------ b slide--------------------------------
 
     //---------------------------- prev click-----------------------------
-
     $("#prev").click(function () {
         prev--;
         margin -= newwidth;
         small -= smallwidth;
-        $(".slide_small:first-child").addClass("actives")
         if (prev <= 0) {
+            $(".slide_s:first-child").addClass("actives")
             margin = 0;
             small = 0;
-            prev=0;      
+            prev = 0;
+
             $(".big_box").css({ "visibility": "visible" });
             $("html").css({ "overflow": "hidden" });
-            
-        
+
         }
         $(".slide_c img").css({ "marginLeft": -margin, "transition": "0.3s ease" })
         $(".slide_small").css({ "margin-left": -small, "transition": "0.3s ease" })
         $(".slide_s.actives").removeClass("actives").prev(".slide_s").addClass("actives");
-           return false;
-       
+        return false;
+
     })
     //---------------------------- prev click-----------------------------
     //window click function
@@ -225,33 +210,23 @@ $(document).ready(function () {
             $("html").css({ "overflow": "scroll" });
         }
     });
-//     eq = $(".slide_s").eq();
-// $('.slide_s img').click(function() {
-//         var source= $(this).attr('src');
-//         $('.slide_c').fadeTo('slow',0.6,function() {
-//           $(this).css({
-//             'background-image' : 'url(' + source + ')',
-//             "marginLeft":-margin,
-//           })
-//         }).fadeTo('slow',1)
-    
-//       })
 
-  
+
+
     $(".slide_s img").click(function () {
         prev++;
         margin += newwidth;
         small += smallwidth;
-        var source= $(this).attr('src');
-       
+        var source = $(this).attr('src');
+
         if (prev >= length) {
             margin = newwidth * 4;
             small = smallwidth * 4;
-            prev=length;
+            prev = length;
             $(".slide_small:last-chid").addClass("actives")
         }
-        var slidesmall=$(".slide_small").index();
- 
+        var slidesmall = $(".slide_small").index();
+
         $(".slide_c img").css({ "marginLeft": -margin, "transition": "0.3s ease" });
         $(".slide_small").css({ "margin-left": -small, "transition": "0.3s ease" });
         $(".slide_s.actives").removeClass("actives").next(this).addClass("actives");
@@ -372,7 +347,39 @@ $(document).ready(function () {
     })
 
 
-
+$(".secondRadio").click(function(){
+    $(".firstRadio").prop( "checked", false );
+    $(this).prop( "checked", true );
+    $(".radiop").css({"display":"none"})
+    $(".latestP").css({"display":"block"})
+})
+$(".firstRadio").click(function(){
+    $(".secondRadio").prop( "checked", false );
+    $(this).prop( "checked", true );
+    $(".radiop").css({"display":"block"})
+    $(".latestP").css({"display":"none"})
+})
+ var click=true;
+$(".click_f_login").click(function(){
+if(click){
+    $(".activeLogin").fadeIn(270);
+    click=false;
+}
+else{
+    $(".activeLogin").fadeOut(1);
+    click=true;
+} 
+})
+$(".code").click(function(){
+if(click){
+    $(".sec_act").fadeIn(270);
+    click=false;
+}
+else{
+    $(".sec_act").fadeOut(1);
+    click=true;
+} 
+})
 
 
     $("#plus").click(function () {
@@ -397,7 +404,7 @@ $(document).ready(function () {
         for (i = 0; i < images.length; i++) {
             images[i].style.display = "none"
         }
-    
+
     }
     function startslide() {
         reset();
@@ -462,17 +469,17 @@ $(document).ready(function () {
         reset();
         images[(index + 1)].style.display = "block"
         index++;
-    
+
     });
     $(".left_icon").click(function () {
-    
+
         if (index == 0) {
             index = images.length;
         }
         reset();
         images[index - 1].style.display = "block"
         index--;
-    
+
     });
 
 
@@ -497,7 +504,6 @@ for (a = 0; a < btn.length; a++) {
     });
 }
 
-
 var rangeV = document.getElementById("fRange");
 var rangeV1 = document.getElementById("fRange1");
 var result = document.getElementById("from");
@@ -511,5 +517,5 @@ rangeV.oninput = function () {
 rangeV1.oninput = function () {
     result1.innerHTML = this.value;
 }
-// -------------------slider------------------------------
+
 

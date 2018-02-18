@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Antique/Category</title>
+    <title>Antique/Home</title>
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
         crossorigin="anonymous">
@@ -49,18 +48,20 @@
                                 <a href="#" class="f_login">Login</a>
                             </li>
                             <li>
-
                                 <i class="fa fa-search s_search"></i>
                                 <a href="#" class="sres_hide">Search</a>
-
                             </li>
-                            <li class="last-child">
+                            <li class="latest_l">
                                 <a href="">
                                     <i class="fa fa-shopping-bag place"></i>
-                                    <span>0</span>Item(s)</a>
+                                    <span>0</span> Item(s)</a>
+                                <div class="itemB">No products in the cart.</div>
                             </li>
+
                         </ul>
+
                     </nav>
+
                 </div>
             </div>
         </div>
@@ -177,7 +178,7 @@
                         </ul>
                     </nav>
                     <i class="fa fa-bars menu_b" aria-hidden="true"></i>
-                    <a href="#" class="scrollup" style="display: inline;">
+                    <a href="#" class="scrollup">
                         <i class="fa fa-angle-up"></i>
                     </a>
                     <!-- swipe menu -->
@@ -356,413 +357,87 @@
         </div>
         </div>
     </section>
-    <!-- Header -->
-    <!-- slider -->
-    <section id="paint_slider">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12 padd">
-                    <div class="slide">
-                        <div class="text">
-                            <h1>Enamelled Glass</h1>
-                            <p>Home / Vase /Enamelled Glass</p>
-                        </div>
+    <section id=viewCart>
 
-                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <table class="table">
+                        <thead class="thead">
+                            <tr class="tr">
+                                <th class="product-thumb">Product</th>
+                                <th class="product-name">&nbsp;</th>
+                                <th class="price">Price</th>
+                                <th class="quantity">Quantity</th>
+                                <th class="total">Total</th>
+                                <th class="remove">&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <td class="product_img">
+                                <a href="#">
+                                    <img src="images/orientalist3.jpg">
+                                </a>
+                            </td>
+                            <td class="product_name main" data-title="">
+                                <a href="#" class="f_name">Porcelain plaque</a>
+                            </td>
+                            <td class="product_price main" data-title="">
+                                <span class="woocommerce-Price-currencySymbol">$</span>
+                                <span>88.00</span>
+                            </td>
+                            <td class="product_quantity" data-title="Quantity">
+                                <div class="nb-quantity style-1">
+                                    <div class="num">
+                                        <input type="number" id="number" value="1" />
+                                        <button id="plus" data-inline="true">+</button>
+                                        <button id="minus" data-inline="true">-</button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="product-subtotal main" data-title="">
+                                <span class="">
+                                    <span class="">$</span>176.00</span>
+                            </td>
+                            <td class="cash" data-title="">
+                                <i class="fa fa-trash-o"></i>
+                            </td>
+                            <tr>
+                                <td colspan="6" class="actions">
+                                    <a class="btn btn-success btn-responsive btn_res" href="#">Update Cart</a>
+                                    <input type="hidden" id="rein">
+                                    <input type="hidden">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-4">
+                <h3 class="total">Cart totals</h3>
+                <div class="cart_total">
+                <div class="first">Subtotal</div>
+                <div class="first_s">$88.00</div>
+                <div class="lines"></div>
+                <div class="second">Total</div>
+                <div class="second_s">$88.00</div>
+                <div><a class="btn btn-success btn-responsive btn_res" href="#">PROCEED TO CHECKOUT</a></div>
+                
+                </div>
+                <div class="main_t">
+                <h3 class="total">Coupon</h3>
+                <div class="coupon">
+                <input type="text" placeholder="Coupen code">
+                
+                <div><a class="btn btn-success btn-responsive btn_res" href="#">APPLY COUPON</a></div>
+                </div>
+            </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="category">
-        <div class="container marg">
-            <div class="row">
-                <div class="col-md-6 col-sm-12 col-xs-12 padd">
-                    <div class="slider">
-                        <div class="slide_in">
-                            <div class="slide_c">
-                                <img src="images/drink1-b.jpg" alt="">
-                            </div>
-                            <div class="slide_c">
-                                <img src="images/drink3-b.jpg" alt="">
-                            </div>
-                            <div class="slide_c">
-                                <img src="images/porcelain4-b.jpg" alt="">
-                            </div>
-                            <div class="slide_c">
-                                <img src="images/porcelain7-b.jpg" alt="">
-                            </div>
-                            <div class="slide_c">
-                                <img src="images/porcelain8-b.jpg" alt="">
-                            </div>
-                        </div>
 
-                        <div class="icon">
-                            <a href="#" id="prev">
-                                <i class="fa fa-angle-left left"></i>
-                            </a>
-                            <a href="#" id="next">
-                                <i class="fa fa-angle-right right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="f_small">
-                        <div class="slide_small">
-                            <div class="slide_s actives">
-                                <img src="images/drink1-b.jpg" alt="">
-                            </div>
-                            <div class="slide_s">
-                                <img src="images/drink3-b.jpg" alt="">
-                            </div>
-                            <div class="slide_s">
-                                <img src="images/porcelain4-b.jpg" alt="">
-                            </div>
-                            <div class="slide_s">
-                                <img src="images/porcelain7-b.jpg" alt="">
-                            </div>
-                            <div class="slide_s">
-                                <img src="images/porcelain8-b.jpg" alt="">
-                            </div>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12 col-xs-12 _right">
 
-                    <div class="right_site">
-                        <div class="col-md-12">
-                            <div class="top_part">
-                                <h3>Enamelled Glass</h3>
-                                <div class="marg"></div>
-                                <span>$66.00</span>
-                                <div class="marg"></div>
-                                <p>This iridescent glass liqueur set is distinctly and impressively detailed, typifying the
-                                    quality of glass produced by the Moser factory in Bohemia.</p>
-                                <div class="marg"></div>
-                                <a class="link" href="#">
-                                    <i class="fa fa-truck" aria-hidden="true"></i>Buyer Protection Guaranteed</a>
-                                <div class="marg"></div>
-                                <div class="num">
-                                    <input type="number" id="number" value="1" />
-                                    <button id="plus" data-inline="true">+</button>
-                                    <button id="minus" data-inline="true">-</button>
-                                </div>
-
-                                <a class="btn btn-success btn-responsive btn_res" href="#">ADD TO CART</a>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="bottom_part">
-                                <ul>
-                                    <li>SKU:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N/A
-                                    </li>
-                                    <ul class="sec_ul">
-                                        Categories:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <li>
-                                            <a href="painting.html">Painting,</a>
-                                        </li>
-                                        <li>
-                                            <a href="Tableware.html">Tablevare,</a>
-                                        </li>
-                                        <li>
-                                            <a href="Vase.html">Vase,</a>
-                                        </li>
-                                    </ul>
-                                    <ul class="sec_ul">
-                                        Tags:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <li>
-                                            <a href="Clock.html">Clock,</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="painting.html">Painting,</a>
-                                        </li>
-                                        <li>
-                                            <a href="Tableware.html">Tablevare,</a>
-                                        </li>
-
-                                    </ul>
-                                    <div class="marg"></div>
-                                    <ul class="sec_ul">
-                                        Share:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <li class="latest_li">
-                                            <a href="#">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                        </li>
-
-                                        <li class="latest_li">
-                                            <a href="#">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="latest_li">
-                                            <a href="#">
-                                                <i class="fa fa-pinterest"></i>
-                                            </a>
-                                        </li>
-                                        <li class="latest_li">
-                                            <a href="#">
-                                                <i class="fa fa-google-plus"></i>
-                                            </a>
-                                        </li>
-                                        <li class="latest_li">
-                                            <a href="#">
-                                                <i class="fa fa-linkedin"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </ul>
-                                <div class="latest_btn">
-                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
-                                    <a class="btn btn-success btn-responsive btn_res" href="#">ADD TO WISHLISH</a>
-                                </div>
-                                <div class="latest_btn">
-                                    <i class="fa fa-camera-retro" aria-hidden="true"></i>
-                                    <a class="btn btn-success btn-responsive btn_res" href="#">COMPARE</a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <section id="b_slider">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="big_box">
-                        <div class="hide_b">
-                            <div class="res_b">
-                                <div class="slide_b">
-                                    <img src="images/porcelain8-b.jpg" alt="">
-                                </div>
-                                <div class="slide_b">
-                                    <img src="images/drink1-b.jpg" alt="">
-                                </div>
-                                <div class="slide_b">
-                                    <img src="images/drink3-b.jpg" alt="">
-                                </div>
-                                <div class="slide_b">
-                                    <img src="images/porcelain4-b.jpg" alt="">
-                                </div>
-                                <div class="slide_b">
-                                    <img src="images/porcelain7-b.jpg" alt="">
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <a href="#" id="prev_b">
-                            <i class="fa fa-caret-left left_b" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" id="next_b">
-                            <i class="fa fa-caret-right right_b" aria-hidden="true"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-    <section id="description">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 ">
-                    <div class="foldable">
-                        <ul>
-                            <li class="active_li">Description
-                                <i class="fa fa-angle-down"></i>
-                            </li>
-                            <div class="active">
-                                <p>Consisting of one jug with stopper and six glasses, in the Islamic style.</p>
-                                <div class="emptiness"></div>
-                                <p>Jug with stopper: height 19 cm; diameter 20 cm</p>
-                                <p>Glasses: height 6.8 cm; width 10 cm; depth 5.5 cm</p>
-                            </div>
-                            <li class="sec_li">Reviews(0)
-                                <i class="fa fa-angle-down"></i>
-                            </li>
-                            <div class="sec_act">
-                                <h4 class="first_r">Reviews</h4>
-                                <p class=first_p>There are no reviews yet.</p>
-                                <div class="submit_box">
-                                    <h4 class="glass">Be the first to review “Enamelled glass”</h4>
-                                    <div class="void"></div>
-                                    <p>Your email address will not be published. Required fields are marked *</p>
-                                    <div class="emptiness"></div>
-                                    <h4 class="review">Your review *</h4>
-                                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                                    <h5 class="name">Name*</h5>
-                                    <input class="name_input" type="text">
-                                    <h6 class="email">Email*</h6>
-                                    <input class="email_input" type="text">
-                                    <a class="btn btn-success btn-responsive btn_res" href="#">Submit</a>
-                                </div>
-                            </div>
-                            <div>
-                        </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <section id="gallery">
-        <div class="container">
-            <h3 class="related_t">Related products</h3>
-            <div class="row row_all">
-                <div class="col-md-3 col-sm-6 col-xs-12 paddg">
-                    <div class="antic">
-                        <a>
-                            <img src="images/lock3.jpg" alt="">
-                        </a>
-                        <div class="text">
-                            <h4>
-                                <a>White Marble Mantel Clock</a>
-                            </h4>
-                            <p>$20.00</p>
-                        </div>
-
-                        <div class="box">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-search"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-refresh"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 paddg">
-                    <div class="antic">
-                        <img src="images/lock7.jpg" alt="">
-                        <div class="text">
-                            <h4>
-                                <a>Porcelain Mantel Clock</a>
-                            </h4>
-                            <p>$45.00</p>
-                        </div>
-                        <div class="box">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-search"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-refresh"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 paddg">
-                    <div class="antic">
-                        <img src="images/glass3.jpg" alt="">
-                        <div class="text">
-                            <h4>
-                                <a>Pair Ormolu Mounted</a>
-                            </h4>
-                            <p>$50.00</p>
-                        </div>
-                        <div class="box">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-search"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-refresh"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 paddg">
-                    <div class="antic">
-                        <img src="images/plate1.jpg" alt="">
-                        <div class="text">
-                            <h4>
-                                <a>Sixteen Piece Dessert Service</a>
-                            </h4>
-                            <p>$44.00</p>
-                        </div>
-                        <div class="box">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-search"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-refresh"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
     <footer>
         <section id="footer">
             <div class="latest_section">
@@ -897,7 +572,7 @@
                     </div>
                 </div>
             </div>
-
+            </div>
             <div class="row marg">
                 <div class="col-md-6 col-sm-12 col-xs-12 padd">
                     <p class="left">Antimall - Designed by
@@ -913,7 +588,6 @@
                     </div>
                 </div>
             </div>
-        </section>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
