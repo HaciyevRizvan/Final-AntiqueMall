@@ -381,7 +381,17 @@ else{
 } 
 })
 
-
+$(".checkB").click(function(){
+    if(click){
+        $(".largeB_Info").css({"display":"block"})
+        click=false;
+    }
+    else{
+        $(".largeB_Info").css({"display":"none"})
+        click=true;
+    }
+  
+})
     $("#plus").click(function () {
         var value = $("#number").val();
         value++;
@@ -402,7 +412,7 @@ else{
     var index = 0;
     function reset() {
         for (i = 0; i < images.length; i++) {
-            images[i].style.display = "none"
+            images[i].style.display = "none";
         }
 
     }

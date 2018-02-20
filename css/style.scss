@@ -4,13 +4,13 @@ body{margin:0px;font-family: 'Roboto', sans-serif;h1,h2,h3,h4,h5,h6{margin:0;}ul
 .logo_part{padding:0px;}
 }
 #first_list{ul{padding:0px;list-style:none;float:right;padding-top:4%;
-.latest_l{border-right:none;&:hover{.itemB{display:block;transition:all 2s ease;}}
-.itemB{width: 33%;height:80px;border:1px solid rgb(236, 232, 232);
+.latest_l{border-right:none;height:2.5em;i{font-size:15px;}&:hover{.itemB{display:block;transition:2s ease-out;}}
+.itemB{width: 33%;height:79px;border:1px solid rgb(236, 232, 232);position:relative;z-index:1;
     background: white;text-align: left;position: absolute;right: 45px;margin-top:12px;
-    box-shadow: 3px 3px 10px -2px #5c5c5c;
-    color:#993816;padding:20px 0px 0px 13px;border-radius:3px;display:none;}}
+    box-shadow: 3px 3px 10px -2px #5c5c5c;transition:1s ease;
+    color:#993816;border-radius:3px;display:none;p{position:absolute;margin:20px 0px 0px 13px;z-index:0;}}}
 li{display:inline-block;border-right:1px solid lightgray;margin:0 10px;padding-right:17px;
-i{color:gray;.pencile{cursor:pointer;}}.pencile{cursor:pointer;}.signin{cursor:pointer;}.s_search{cursor:pointer;}
+i{color:gray;font-size:14.5px;.pencile{cursor:pointer;}}.pencile{cursor:pointer;}.signin{cursor:pointer;}.s_search{cursor:pointer;}
 a{color:gray;text-decoration:none;&:hover{text-decoration:none;color:hsl(16, 75%, 34%);transform:1s ease;}
 .place{padding-right:10px;&:hover{color:#993816;transition:.5s;}}
 }
@@ -126,6 +126,7 @@ input{position: relative;top: 300px;width: 35%;height: 40px;background: transpar
 .slider_in.latest{background-image:url("../images/slide3.jpg");height:100vh;}    
 .text{position:relative; top:30%;text-align:center;
  .matrix{margin:0;list-style-type: none;transform: rotate(-3deg);animation-name:fadeInDown;animation-duration:1s;
+    background-image:url(images/slide1.jpg);background-attachment: fixed;-webkit-background-clip:text;
    li{font-size:63px;text-transform:uppercase;font-family: "Playfair Display";display:inline-block;transform: rotate(45deg);
     font-weight:700;color:white;animation-name:fadeInDownLi;animation-duration:1s;}}
     p{font-family: Lato;font-weight:500;font-size:22px;margin:20px 0px 20px 0px;color:white;
@@ -222,7 +223,9 @@ p{background:transparent;color:gray;}}
 .visText.NAL{padding:7px 0px 7px 0px;} 
 }
 .close_r{position: absolute;bottom:0px;right: 10px;font-size:40px;&:hover{color:#993816;}}}}
-.f_btn{.antic{img{max-width:100%;}}}
+.f_btn{.antic{background:lightgray;width:100%;box-sizing:border-box;position:relative;top:0px;left:0px;
+    img{width:100%;}&:hover{border:1px solid black;img{transform:scale(1.2);transition:.7s ease;}h4{background:#d1592e;transition:.5s ease;}
+a{color:black;transition:.5s ease;;}}}}
 }
 #banner{.top{padding-top:50px;.img_box{box-sizing:border-box;overflow:hidden;
 img{width:100%;transform: scale(1); &:hover{transform: scale(1.05);transition:all 1s ease;cursor:pointer;}}}}
@@ -262,7 +265,7 @@ a{text-decoration:none;color:gray;}p{font-size:14px;}h3{color:#222;font-size:18p
     font-size:20px;font-weight:300;text-align:center;}
 }
 }
- #logos{margin:50px 0px 50px 0px;img{width:100%;}}
+ #logos{margin:50px 0px 50px 0px;img{width:70%;}}
 #footer{.latest_section{background:#993816;padding:50px 0px 50px 0px;.contact{h3{color:white;margin-bottom:30px;}
 .info{list-style:none;padding:0;a{color:white;text-decoration:none;}p{display:inline-block;color:white;}
 i{padding-right:13px;font-size:17px;&:hover{color:#df9b82;}}
@@ -723,7 +726,9 @@ img{max-width:100%;} p{margin:40px 0px 40px 0px;}
                 input{padding:13px 0px;width:100%;padding-left:5px;border:1px solid lightgray;outline:none;}}
             .largeB{p{color:#676c77;margin-top:30px;}h3{margin-top:20px;font-size:20px;color:#222;}
             input{padding:13px 0px;width:100%;padding-left:5px;border:1px solid lightgray;outline:none;}
-            textarea{width:100%;}
+            textarea{width:100%;}}
+            .largeB_Info{display:none;p{color:#676c77;margin-top:30px;}h3{margin-top:20px;font-size:20px;color:#222;}
+            input{padding:13px 0px;width:100%;padding-left:5px;border:1px solid lightgray;outline:none;}
         }
             .select{padding:13px 0px;width:100%;margin-top:0px;padding-left:5px;border:1px solid lightgray;outline:none;
              .option{padding:10px 0px;}

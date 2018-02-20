@@ -572,13 +572,13 @@
 
 @keyframes fadeInDown {
   from {
-    opacity: 0;
+    display:none;
     transform: translate3d(0, -20%, 0);
     
   }
 
   to {
-    opacity: 1;
+    display:block;
     transform: none;
     
     
