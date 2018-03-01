@@ -46,7 +46,7 @@ ul{padding-left:0px;.statistics{border:2px solid white;font-weight:bold;border-r
 &:hover{cursor:pointer;}
 }
 .swipe{list-style:none;background:#0e0e0e;position:fixed;z-index:60;margin:0;text-align:left;left:0;top:0;
-    padding:0;height:100%;z-index:50;min-height:59px;width:285px;left:-285px;overflow-x:scroll;
+    padding:0;height:100%;z-index:9999;min-height:59px;width:285px;left:-285px;overflow-x:scroll;
     h2{color:white;margin-left: 10px;padding:30px 0px;text-transform:uppercase;font-size:20px;}
     .close{color: black;border: 1px solid white;position: relative;top: -58px;right: 25px;
      border-radius: 50%;padding: 7px 10px;background:white;}
@@ -59,9 +59,9 @@ ul{padding-left:0px;.statistics{border:2px solid white;font-weight:bold;border-r
    .shop{padding: 0;position: relative;z-index:60;margin-left:5%;width:250px;top:100%;display:none;color:white;
     li{display:block;text-align:left;text-transform:uppercase;font-weight:bold;border-bottom:1px dotted lightgray;
     a{color:white;}}}
-    i{color:white;}a{color:white;text-decoration:none;padding-left:15px;}}}
+    i{color:white;}a{color:white;text-decoration:none;padding-left:15px;}}.li_page{padding-bottom:54px;}}
     .latest{border-bottom:1px solid lightgray;}
-    .pages{position: relative;z-index: 60;width:95%;display:none;background:black;border:none;padding:0px;left:10px;
+    .pages{position: relative;z-index: 60;width:95%;display:none;background:black;border:none;padding:0px;left:10px;top:-5px;
    h3{text-align: left;font-size:13px;}
     .f_page{padding: 0;li{display:block;text-align:left;padding:1px 0px 1px 0px;
     text-transform:uppercase;font-weight:bold;color:black;
@@ -525,8 +525,10 @@ i{font-size:50px;color:white;}}
 #scrollnum{background:url("../images/background_about.jpg");background-size:cover;
 background-repeat:no-repeat;padding:50px 0px 80px 0px;background-position: 65% -40px;
     .text{text-align:center;h3{font-family:'Dancing Script';font-weight: 600;color:#993816;}
-h1{color:#222;text-transform:uppercase;font-size:24px;padding-bottom:50px;}p{color:gray;}}
-.scrollnumber{text-align:center;padding-top:80px;h1{font-size:60px;color:gray;}p{font-size:21px;color:gray;padding-bottom:50px;}}
+h1{color:#222;text-transform:uppercase;display:inline;font-size:24px;padding-bottom:50px;}
+
+p{color:gray;}}
+.scrollnumber{text-align:center;padding-top:60px;h1{font-size:60px;color:gray;display:inline;}.sup{display:inline;}p{font-size:21px;color:gray;padding-bottom:50px;}}
 }
 // about team
 #about_team{.text{text-align:center;h3{font-family:'Dancing Script';font-weight: 600;color:#993816;}
@@ -909,7 +911,7 @@ li{display:inline-block;border-right:none;margin:0 17px;padding-right:2px;
 #footer{.contact{margin-left:25%;}.about_market{margin-left:25%;}}
 #testimonial2{.box5{i{top:25px;}}.box6{margin-top:65px;i{top:80px;}}.box7{margin-top:20px;i{top:33px;}}.box8{margin-top:60px;}}
 #about{.hei{height:300px;.right_part{margin-top:45px;text-align:center;.box{display:none;}.box_line{display:none;}
-    .img_box{float:none;width:85px;position: relative;margin-left:40%;
+.img_box{float:none;width:85px;position: relative;margin-left:40%;
 }
 .r_text{position:none;}}}
 .padd{padding:75px;.marg{margin-top:0px;}}}
@@ -926,6 +928,7 @@ li{display:inline-block;border-right:none;margin:0 17px;padding-right:2px;
 tbody{.main{padding:20px 0px 20px 0px;}.product-subtotal.main{border-bottom:1px solid lightgray;}
 .cash{padding-top:13px;}.tr{border:none;}.product_img{border:none;}.product_quantity{padding-top:8px;}}}.btn_res{width:100%;margin:0px 0px 8px 0px;}}
 #viewCart{.cart_total{height:37vh;}}
+#head{#logo{img{padding-top:2%;}}}
 }
 
 @media only screen and(max-width:480px){
