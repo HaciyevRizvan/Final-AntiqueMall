@@ -145,7 +145,7 @@ input{position: relative;top: 300px;width: 35%;height: 40px;background: transpar
 #f_sale_page{.padd{padding:0px;}.sale_p{padding:30px 0px 15px 0px;background:#e2c6c6;
  p{color:gray;text-align:center;font-size:18px;a{color:#993816;text-decoration:none;text-transform:uppercase;font-weight:600;i{padding-left:10px;}}}}}
 // Gallery
-#gallery{padding-top:70px;text-align:center;.text{text-align:center;h3{font-family:'Dancing Script';font-weight: 600;color:#993816;}
+#gallery{padding-top:70px;text-align:center;.text{text-align:center;h3{font-family:'Dancing Script';font-weight: 600;color:#993816;margin-bottom:0px;}
 h1{color:#222;text-transform:uppercase;font-size:24px;padding-bottom:50px;}
 h4{font-size:14px;a{text-decoration:none;color:gray;cursor:pointer;&:hover{color:#993816;transition:0.5s;}}}}
 .products_list{padding-bottom:40px;ul{padding:0px;list-style:none;text-align:center;
@@ -233,7 +233,7 @@ img{width:100%;transform: scale(1); &:hover{transform: scale(1.05);transition:al
 }
 // start selling
 #start_selling{.for_b{text-align:center;
-.text{text-align:center;padding-top:70px;h3{font-family:'Dancing Script';font-weight: 600;color:#993816;}
+.text{text-align:center;padding-top:70px;h3{font-family:'Dancing Script';font-weight: 600;color:#993816;margin-bottom:0px;}
 h1{color:#222;text-transform:uppercase;font-size:24px;padding-bottom:50px;}}
 .box_line{border:5px solid #ebabab;border-radius:10px;width:60%;height:400px;position:absolute;}
 .box{box-sizing:border-box;overflow:hidden;position:relative;top:45px;left:40px;width:85%;
@@ -281,8 +281,11 @@ li{padding:11px;a{color:white;text-decoration:none;}}}}}.marg{margin:0;margin:20
 #paint_slider{.slide{background:url("../images/image-blog.jpg");background-repeat: no-repeat;background-size: cover;background-position: center center;
     height:45vh;width:100%;text-align:center;color:white;position: relative;.text{position: relative;top:30%;
     p{font-family: Lato;font-weight:bold;font-weight:500;font-size:15px;width:50%;margin-left:25%;padding:20px 0px 20px 0px;
-    }h1{font-family: Lato;font-weight: 400;}
-    }}.padd{padding:0;}}
+    }h1{font-family: Lato;font-weight: 400;}.ViewH{margin-bottom:23px}.date{i{padding:0px 10px;}}
+  
+    }}.padd{padding:0;}
+
+}
     #paint_gallery{margin-top:50px;.form{text-align:center;position:relative;top:-30px;color:gray;
     .sorting{border: 1px solid lightgray;padding: 10px 20px;border-radius: 50px;outline:none;}}
     .right_side{padding:0;padding-bottom:70px;.sorting{position:relative;
@@ -340,6 +343,42 @@ li{padding:11px;a{color:white;text-decoration:none;}}}}}.marg{margin:0;margin:20
     li{display:inline-block;padding:5px 8px;background:rgb(212, 226, 245);
     a{color:gray;text-decoration:none;&:hover{color:white;transition:all 0.1s;}}}}}
     }
+    .compare{position:fixed;top:90px;z-index:1100;background:rgba(99, 98, 98, 0.76);box-sizing:border-box;
+        width:100vw;height:100vh;top:0;left:0;display:none;cursor:pointer;z-index:1200;
+    .bord{width:88%;height:590px;background:rgb(140, 141, 140);border:12px solid #363434;
+    margin-top:3%;margin-left:4.7%;position:relative;
+    .reg{text-align:left;width:100%;height:530px;background:white;box-shadow: 0 0 10px rgba(0,0,0,.8);cursor:text;
+    overflow-y:scroll;border-radius:5px;border:1px solid gray;padding:5px 0px 0px 5px;position:relative;
+      p{width:100%;color:white;background:rgb(74, 75, 74);padding:7px;margin:0px;}
+      
+      .visibleBox{width:40%;height:540px;background:#f6f6f6;position:relative;margin-left:27%;padding-top:10px;
+       h4{text-align:center;color:gray;font-size:15px;}.removeV{padding-left:5px;color:red;font-size:15px;cursor:pointer;}
+       .visibleImgBox{width:160px;height:160px;border:1px solid lightgray;background:red;margin:3% 0 0 33%;img{width:100%;}
+    }
+    .visPrice{text-align:center;h3{color:gray;font-size:15px;margin-bottom:10px;}
+    .visibleNumber{color:gray;font-size:15px;text-decoration:underline;cursor:text;display:inline-block;}
+    .visBtn{background:rgb(74, 75, 74);color:white;display:inherit;width:130px;outline:none;margin-left:36%;margin-top:13px;
+    border:1px solid rgb(74, 75, 74);&:hover{background:rgb(124, 126, 124);border:1px solid rgb(124, 126, 124)}
+    }
+    .visText{color:gray;background: transparent;font-size:11.5px;margin-top:5px;}
+    .lines{color: lightgray;background:lightgray;position:relative;
+        border: 1px solid lightgray;border-radius: 5px;margin-top: 5px; margin-bottom: 5px;}
+     .visText.p{color:rgb(43, 221, 123);background: transparent;font-size:15px;padding:0px;padding:7px 0px 7px 0px;}
+     .visText.minus{color:gray;background: transparent;font-size:14px;padding:0px;margin-top:20px;} 
+     .visText.NA{color:gray;background: transparent;font-size:14px;padding:0px;margin-top:23px;margin-bottom:27px;} 
+    }}
+    .visLeft{position:absolute;left:0;top:66.9%;width:27.5%;
+        .lines{color: lightgray;background:lightgray;position:relative;width:244%;
+        border: 1px solid lightgray;border-radius: 5px;margin-top: 5px; margin-bottom: 5px;}
+        .visText.p{color:rgb(43, 221, 123);background: transparent;font-size:15px;padding:0px;padding:7px 0px 7px 0px;}
+        .visText.minus{color:gray;background: transparent;font-size:14px;padding:0px;padding:7px 0px 7px 0px;} 
+        .visText.NA{color:gray;background: transparent;font-size:14px;padding:0px;padding:7px 0px 7px 0px;}   
+    p{background:transparent;color:gray;}}
+    .visText.pL{padding:0px;padding:7px 0px 8px 0px;}
+    .visText.minusL{padding:7px 0px 7px 0px;} 
+    .visText.NAL{padding:7px 0px 7px 0px;} 
+    }
+    .close_r{position: absolute;bottom:0px;right: 10px;font-size:40px;&:hover{color:#993816;}}}}
     }
     #accord{.foldable{width: 90%;padding:5% 0 0 10%;
         .click_btn {background-color: #f4f4f4;color: black;margin-top: 10px;text-align: center;
@@ -524,14 +563,14 @@ i{font-size:50px;color:white;}}
 }
 #scrollnum{background:url("../images/background_about.jpg");background-size:cover;
 background-repeat:no-repeat;padding:50px 0px 80px 0px;background-position: 65% -40px;
-    .text{text-align:center;h3{font-family:'Dancing Script';font-weight: 600;color:#993816;}
+    .text{text-align:center;h3{font-family:'Dancing Script';font-weight: 600;color:#993816;margin-bottom:0px;}
 h1{color:#222;text-transform:uppercase;display:inline;font-size:24px;padding-bottom:50px;}
 
 p{color:gray;}}
 .scrollnumber{text-align:center;padding-top:60px;h1{font-size:60px;color:gray;display:inline;}.sup{display:inline;}p{font-size:21px;color:gray;padding-bottom:50px;}}
 }
 // about team
-#about_team{.text{text-align:center;h3{font-family:'Dancing Script';font-weight: 600;color:#993816;}
+#about_team{.text{text-align:center;h3{font-family:'Dancing Script';font-weight: 600;color:#993816;margin-bottom:0px;}
 h1{color:#222;text-transform:uppercase;font-size:24px;padding-bottom:50px;}p{color:gray;}}
 .teams{text-align:center;.persons{
 .person_text{h1{
@@ -564,6 +603,29 @@ img{max-width:100%;} p{margin:40px 0px 40px 0px;}
 .btn_res{background:#993816;border:1px solid white;border-radius:20px;padding:5px 40px;margin-bottom:30px;
     font-size:20px;font-weight:600;.right{padding-left:10px;};
     &:hover{background:#993816;border:1px solid #993816;transition:0.3s}}
+    .changepage{position:relative;top:40px;.poslef{position:absolute;left:-40px;top:2px;opacity:0;}
+    a{text-decoration:none;color:#676c77;font-size:15px;transition:all 0.5s ease;
+    }&:hover{a{color:#993816;}.poslef{left:-20px;color:#993816;transition:all 0.7s ease;opacity:1;}
+    .posrig{right:-20px;color:#993816;transition:all 0.7s ease;opacity:1;}
+}
+   .next{width:60px;margin:5px 0px 40px 0px; }
+   .posrig{position:absolute;right:-40px;top:2px;}
+}  
+    .prevpost{margin-top:5px;margin-bottom:85px;&:hover{.changepage{a{color:#993816;}.poslef{left:-20px;color:#993816;transition:all 0.7s ease;opacity:1;}}}}
+.postBox{width:100%;background:#edf0f5;padding:40px 34px 20px 20px;h4{color:gray;}
+.wmpost{margin-bottom:0px;}.wsmpost{margin-top:0px;}
+.fborpost{border-bottom:2px solid lightgray;padding-bottom:10px;margin-bottom:10px;a{text-decoration:none;color:#676c77;&:hover{color:#993816;}}}
+}
+.line{width: 100%;
+    border: 1px solid lightgray;border-radius: 5px;margin-top: 5px; margin-bottom: 5px;}
+textarea{width:100%;background:#edf0f5;outline:none;border-top:none;border-left:none;border-right:none;border-bottom:2px solid lightgray;}
+.fpost{span{margin-top:20px;}}.postin{width:85%;height:40px;outline:none;float:right;margin-right:0px;}
+.btn_res{margin-top:10px;font-weight:300;}
+.W{margin:20px 0px 10px;
+a{display:block;text-decoration:none;color:#676c77;
+&:hover{color:#993816;transition:0.7s ease;}}.firstpost{padding:20px 0px 0px 0px;}
+img{float:left;padding:20px 15px 0px 0px;}
+}
 }
 #contact_map{.padd{padding:0px;}
 }
@@ -761,7 +823,11 @@ img{max-width:100%;} p{margin:40px 0px 40px 0px;}
                 &:hover{background:#d44511;cursor: pointer;}
             } 
         }
- // Animations
+        #userPage{margin:70px 0px;nav{ul{margin:0;li{list-style:none;border-bottom:1px solid lightgray;margin:50px 0px;
+        a{color:gray;text-decoration:none;position:relative;top:-25px;&:hover{color:#993816;}}}}}
+        .userDesc{border:1px solid lightgray;width:100%;height:80vh;}
+    }
+ // Animation
  @keyframes lightSpeedIn {
     from {
       transform: translate3d(200%, 0, 0) skewX(-30deg);
@@ -978,6 +1044,8 @@ h3{font-size:20px;margin-bottom:0px;}}}
  .latest_btn{margin-bottom:0px;}}}}}}             
  #footer{.marg{margin-left:0px;.left{text-align:left;}.pay_logo{text-align:left;margin-right:0px;margin-left:10px;img{width:30px;}}}}
  #check {.foldable_check {.sec_act {.btn_res {margin-top: 15px;}}}}
+ #blog{ .postin{width:100%;}.W {a{font-size:11px;}}.changepage {.posrig{display:none;}}}
+ 
 }
 @media only screen and(max-width:320px){
     #first_list{ul{float:none;text-align:left;li{border-right:none;margin:0 4px;padding-right:0px;}}}
@@ -1016,5 +1084,6 @@ h3{font-size:20px;margin-bottom:0px;}}}
     }}}}
      #description {.sec_act {.submit_box {height:100vh;.btn_res{width:150px;}}}}  
      #viewCart{.cart_total{height:37vh;.btn_res{font-size:11px;}}}
+     #blog{ .postin{width:100%;}.W {a{font-size:11px;}}}
 }
 

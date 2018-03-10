@@ -698,7 +698,8 @@ body {
     #gallery .text h3 {
       font-family: 'Dancing Script';
       font-weight: 600;
-      color: #993816; }
+      color: #993816;
+      margin-bottom: 0px; }
     #gallery .text h1 {
       color: #222;
       text-transform: uppercase;
@@ -1099,7 +1100,8 @@ body {
     #start_selling .for_b .text h3 {
       font-family: 'Dancing Script';
       font-weight: 600;
-      color: #993816; }
+      color: #993816;
+      margin-bottom: 0px; }
     #start_selling .for_b .text h1 {
       color: #222;
       text-transform: uppercase;
@@ -1326,6 +1328,10 @@ body {
     #paint_slider .slide .text h1 {
       font-family: Lato;
       font-weight: 400; }
+    #paint_slider .slide .text .ViewH {
+      margin-bottom: 23px; }
+    #paint_slider .slide .text .date i {
+      padding: 0px 10px; }
 #paint_slider .padd {
   padding: 0; }
 
@@ -1591,6 +1597,174 @@ body {
             #paint_gallery .left_side .product_tags ul li a:hover {
               color: white;
               transition: all 0.1s; }
+  #paint_gallery .compare {
+    position: fixed;
+    top: 90px;
+    z-index: 1100;
+    background: rgba(99, 98, 98, 0.76);
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: none;
+    cursor: pointer;
+    z-index: 1200; }
+    #paint_gallery .compare .bord {
+      width: 88%;
+      height: 590px;
+      background: #8c8d8c;
+      border: 12px solid #363434;
+      margin-top: 3%;
+      margin-left: 4.7%;
+      position: relative; }
+      #paint_gallery .compare .bord .reg {
+        text-align: left;
+        width: 100%;
+        height: 530px;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        cursor: text;
+        overflow-y: scroll;
+        border-radius: 5px;
+        border: 1px solid gray;
+        padding: 5px 0px 0px 5px;
+        position: relative; }
+        #paint_gallery .compare .bord .reg p {
+          width: 100%;
+          color: white;
+          background: #4a4b4a;
+          padding: 7px;
+          margin: 0px; }
+        #paint_gallery .compare .bord .reg .visibleBox {
+          width: 40%;
+          height: 540px;
+          background: #f6f6f6;
+          position: relative;
+          margin-left: 27%;
+          padding-top: 10px; }
+          #paint_gallery .compare .bord .reg .visibleBox h4 {
+            text-align: center;
+            color: gray;
+            font-size: 15px; }
+          #paint_gallery .compare .bord .reg .visibleBox .removeV {
+            padding-left: 5px;
+            color: red;
+            font-size: 15px;
+            cursor: pointer; }
+          #paint_gallery .compare .bord .reg .visibleBox .visibleImgBox {
+            width: 160px;
+            height: 160px;
+            border: 1px solid lightgray;
+            background: red;
+            margin: 3% 0 0 33%; }
+            #paint_gallery .compare .bord .reg .visibleBox .visibleImgBox img {
+              width: 100%; }
+          #paint_gallery .compare .bord .reg .visibleBox .visPrice {
+            text-align: center; }
+            #paint_gallery .compare .bord .reg .visibleBox .visPrice h3 {
+              color: gray;
+              font-size: 15px;
+              margin-bottom: 10px; }
+            #paint_gallery .compare .bord .reg .visibleBox .visPrice .visibleNumber {
+              color: gray;
+              font-size: 15px;
+              text-decoration: underline;
+              cursor: text;
+              display: inline-block; }
+            #paint_gallery .compare .bord .reg .visibleBox .visPrice .visBtn {
+              background: #4a4b4a;
+              color: white;
+              display: inherit;
+              width: 130px;
+              outline: none;
+              margin-left: 36%;
+              margin-top: 13px;
+              border: 1px solid #4a4b4a; }
+              #paint_gallery .compare .bord .reg .visibleBox .visPrice .visBtn:hover {
+                background: #7c7e7c;
+                border: 1px solid #7c7e7c; }
+            #paint_gallery .compare .bord .reg .visibleBox .visPrice .visText {
+              color: gray;
+              background: transparent;
+              font-size: 11.5px;
+              margin-top: 5px; }
+            #paint_gallery .compare .bord .reg .visibleBox .visPrice .lines {
+              color: lightgray;
+              background: lightgray;
+              position: relative;
+              border: 1px solid lightgray;
+              border-radius: 5px;
+              margin-top: 5px;
+              margin-bottom: 5px; }
+            #paint_gallery .compare .bord .reg .visibleBox .visPrice .visText.p {
+              color: #2bdd7b;
+              background: transparent;
+              font-size: 15px;
+              padding: 0px;
+              padding: 7px 0px 7px 0px; }
+            #paint_gallery .compare .bord .reg .visibleBox .visPrice .visText.minus {
+              color: gray;
+              background: transparent;
+              font-size: 14px;
+              padding: 0px;
+              margin-top: 20px; }
+            #paint_gallery .compare .bord .reg .visibleBox .visPrice .visText.NA {
+              color: gray;
+              background: transparent;
+              font-size: 14px;
+              padding: 0px;
+              margin-top: 23px;
+              margin-bottom: 27px; }
+        #paint_gallery .compare .bord .reg .visLeft {
+          position: absolute;
+          left: 0;
+          top: 66.9%;
+          width: 27.5%; }
+          #paint_gallery .compare .bord .reg .visLeft .lines {
+            color: lightgray;
+            background: lightgray;
+            position: relative;
+            width: 244%;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            margin-top: 5px;
+            margin-bottom: 5px; }
+          #paint_gallery .compare .bord .reg .visLeft .visText.p {
+            color: #2bdd7b;
+            background: transparent;
+            font-size: 15px;
+            padding: 0px;
+            padding: 7px 0px 7px 0px; }
+          #paint_gallery .compare .bord .reg .visLeft .visText.minus {
+            color: gray;
+            background: transparent;
+            font-size: 14px;
+            padding: 0px;
+            padding: 7px 0px 7px 0px; }
+          #paint_gallery .compare .bord .reg .visLeft .visText.NA {
+            color: gray;
+            background: transparent;
+            font-size: 14px;
+            padding: 0px;
+            padding: 7px 0px 7px 0px; }
+          #paint_gallery .compare .bord .reg .visLeft p {
+            background: transparent;
+            color: gray; }
+        #paint_gallery .compare .bord .reg .visText.pL {
+          padding: 0px;
+          padding: 7px 0px 8px 0px; }
+        #paint_gallery .compare .bord .reg .visText.minusL {
+          padding: 7px 0px 7px 0px; }
+        #paint_gallery .compare .bord .reg .visText.NAL {
+          padding: 7px 0px 7px 0px; }
+      #paint_gallery .compare .bord .close_r {
+        position: absolute;
+        bottom: 0px;
+        right: 10px;
+        font-size: 40px; }
+        #paint_gallery .compare .bord .close_r:hover {
+          color: #993816; }
 
 #accord .foldable {
   width: 90%;
@@ -2399,7 +2573,8 @@ body {
     #scrollnum .text h3 {
       font-family: 'Dancing Script';
       font-weight: 600;
-      color: #993816; }
+      color: #993816;
+      margin-bottom: 0px; }
     #scrollnum .text h1 {
       color: #222;
       text-transform: uppercase;
@@ -2427,7 +2602,8 @@ body {
   #about_team .text h3 {
     font-family: 'Dancing Script';
     font-weight: 600;
-    color: #993816; }
+    color: #993816;
+    margin-bottom: 0px; }
   #about_team .text h1 {
     color: #222;
     text-transform: uppercase;
@@ -2566,6 +2742,106 @@ body {
       background: #993816;
       border: 1px solid #993816;
       transition: 0.3s; }
+  #blog .changepage {
+    position: relative;
+    top: 40px; }
+    #blog .changepage .poslef {
+      position: absolute;
+      left: -40px;
+      top: 2px;
+      opacity: 0; }
+    #blog .changepage a {
+      text-decoration: none;
+      color: #676c77;
+      font-size: 15px;
+      transition: all 0.5s ease; }
+    #blog .changepage:hover a {
+      color: #993816; }
+    #blog .changepage:hover .poslef {
+      left: -20px;
+      color: #993816;
+      transition: all 0.7s ease;
+      opacity: 1; }
+    #blog .changepage:hover .posrig {
+      right: -20px;
+      color: #993816;
+      transition: all 0.7s ease;
+      opacity: 1; }
+    #blog .changepage .next {
+      width: 60px;
+      margin: 5px 0px 40px 0px; }
+    #blog .changepage .posrig {
+      position: absolute;
+      right: -40px;
+      top: 2px; }
+  #blog .prevpost {
+    margin-top: 5px;
+    margin-bottom: 85px; }
+    #blog .prevpost:hover .changepage a {
+      color: #993816; }
+    #blog .prevpost:hover .changepage .poslef {
+      left: -20px;
+      color: #993816;
+      transition: all 0.7s ease;
+      opacity: 1; }
+  #blog .postBox {
+    width: 100%;
+    background: #edf0f5;
+    padding: 40px 34px 20px 20px; }
+    #blog .postBox h4 {
+      color: gray; }
+    #blog .postBox .wmpost {
+      margin-bottom: 0px; }
+    #blog .postBox .wsmpost {
+      margin-top: 0px; }
+    #blog .postBox .fborpost {
+      border-bottom: 2px solid lightgray;
+      padding-bottom: 10px;
+      margin-bottom: 10px; }
+      #blog .postBox .fborpost a {
+        text-decoration: none;
+        color: #676c77; }
+        #blog .postBox .fborpost a:hover {
+          color: #993816; }
+  #blog .line {
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px; }
+  #blog textarea {
+    width: 100%;
+    background: #edf0f5;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid lightgray; }
+  #blog .fpost span {
+    margin-top: 20px; }
+  #blog .postin {
+    width: 85%;
+    height: 40px;
+    outline: none;
+    float: right;
+    margin-right: 0px; }
+  #blog .btn_res {
+    margin-top: 10px;
+    font-weight: 300; }
+  #blog .W {
+    margin: 20px 0px 10px; }
+    #blog .W a {
+      display: block;
+      text-decoration: none;
+      color: #676c77; }
+      #blog .W a:hover {
+        color: #993816;
+        transition: 0.7s ease; }
+    #blog .W .firstpost {
+      padding: 20px 0px 0px 0px; }
+    #blog .W img {
+      float: left;
+      padding: 20px 15px 0px 0px; }
 
 #contact_map .padd {
   padding: 0px; }
@@ -3380,6 +3656,26 @@ body {
       background: #d44511;
       cursor: pointer; }
 
+#userPage {
+  margin: 70px 0px; }
+  #userPage nav ul {
+    margin: 0; }
+    #userPage nav ul li {
+      list-style: none;
+      border-bottom: 1px solid lightgray;
+      margin: 50px 0px; }
+      #userPage nav ul li a {
+        color: gray;
+        text-decoration: none;
+        position: relative;
+        top: -25px; }
+        #userPage nav ul li a:hover {
+          color: #993816; }
+  #userPage .userDesc {
+    border: 1px solid lightgray;
+    width: 100%;
+    height: 80vh; }
+
 @keyframes lightSpeedIn {
   from {
     transform: translate3d(200%, 0, 0) skewX(-30deg);
@@ -4149,7 +4445,14 @@ body {
         width: 30px; }
 
   #check .foldable_check .sec_act .btn_res {
-    margin-top: 15px; } }
+    margin-top: 15px; }
+
+  #blog .postin {
+    width: 100%; }
+  #blog .W a {
+    font-size: 11px; }
+  #blog .changepage .posrig {
+    display: none; } }
 @media only screen and (max-width: 320px) {
   #first_list ul {
     float: none;
@@ -4363,6 +4666,11 @@ body {
   #viewCart .cart_total {
     height: 37vh; }
     #viewCart .cart_total .btn_res {
-      font-size: 11px; } }
+      font-size: 11px; }
+
+  #blog .postin {
+    width: 100%; }
+  #blog .W a {
+    font-size: 11px; } }
 
 /*# sourceMappingURL=style.css.map */
